@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atma Qatarse Institute | Counselling, training and supervision</title>
+<meta name="description" content="Atma Qatarse Institute is a counselling practice led by Claudia Cady. Sessions for individuals, couples and groups, with training and supervision for practitioners.">
+<link rel="icon" type="image/png" href="imgs/favicon.png">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Libre+Baskerville:ital@1&family=Source+Sans+3:wght@400;600&display=swap">
+
+<!-- A animação de entrada só vale com JavaScript ativo: sem ele o conteúdo aparece direto. -->
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- Em produção, trocar o CDN do Tailwind pelo CSS compilado. -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- Bilíngue: o inglês é a versão principal e fica no HTML. O botão EN | PT troca os textos
+     marcados com data-i18n (conteúdo), data-i18n-alt (alt) e data-i18n-aria (aria-label)
+     pelos de js/i18n.js. translate="no" protege o nome da marca da tradução do navegador.
+     Estrutura inspirada no site atual da Ágape: faixas de cor cheia, ondas entre seções,
+     foto com recorte orgânico, cards que viram e linhas alternadas de imagem e texto. -->
+<body class="bg-surface font-sans text-[17px] leading-7 text-ink">
+
+<!-- O logotipo é azul e some sobre o marinho: por isso o cabeçalho fica claro. -->
+<header id="topo" class="fixed inset-x-0 top-0 z-[100] border-b border-transparent bg-surface transition-shadow">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="imgs/logo-mark.png" alt="Atma Qatarse Institute" width="320" height="194" class="h-10 w-auto">
+      <span translate="no" class="whitespace-nowrap font-display text-[15px] font-medium uppercase leading-5 tracking-[0.08em] text-brand-midnight max-[399px]:hidden">Atma Qatarse<span class="block text-[10px] font-sans font-semibold leading-3 tracking-[0.3em] text-accent-ink">Institute</span></span>
+    </a>
+    <nav class="hidden items-center gap-1 text-[15px] font-semibold lg:flex" aria-label="Sections" data-i18n-aria="nav.label">
+      <a href="#approach" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.approach">Approach</a>
+      <a href="#sessions" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.sessions">Sessions</a>
+      <a href="#group" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.group">Women's Group</a>
+      <a href="#practitioners" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.practitioners">Practitioners</a>
+      <a href="#questions" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.questions">Questions</a>
+    </nav>
+    <div class="flex flex-none items-center gap-2 sm:gap-3">
+      <!-- Troca de idioma. O botão do idioma ativo fica marcado com aria-pressed.
+           O Arquivo 002 pede "ENGLISH | PORTUGUÊS"; abaixo de 1280px não cabe com o menu e vira EN | PT. -->
+      <div class="flex rounded-full border border-line-strong p-0.5 text-[13px] font-semibold leading-4" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" data-lang="en" aria-pressed="true" class="lang-option rounded-full px-2.5 py-1.5" lang="en"><span class="xl:hidden">EN</span><span class="hidden xl:inline">English</span></button>
+        <button type="button" data-lang="pt" aria-pressed="false" class="lang-option rounded-full px-2.5 py-1.5" lang="pt-BR"><span class="xl:hidden">PT</span><span class="hidden xl:inline">Português</span></button>
+      </div>
+      <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-action px-4 py-2.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover sm:px-5" data-i18n="cta.book">Book a session</a>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="pt-16">
+
+  <!-- Hero: faixa marinho cheia, texto à esquerda e foto com recorte orgânico à direita. -->
+  <section class="marble relative overflow-hidden bg-brand-midnight text-ink-invert">
+    <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-28 pt-12 sm:px-6 lg:min-h-[680px] lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:pb-32">
+      <div class="reveal">
+        <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="hero.overline">Therapeutic sessions · Training · Supervision</p>
+        <h1 class="mt-5 font-display text-display-m font-medium uppercase sm:text-display-l lg:text-display-xl" data-i18n="hero.title">A deeper, more integrated life.</h1>
+        <p class="mt-6 max-w-xl text-[19px] leading-[30px] text-ink-invertmuted" data-i18n="hero.lead">Atma Qatarse Institute is a counselling practice led by Claudia Cady. It offers online therapeutic sessions for individuals, couples and groups, and is opening training and supervision for practitioners.</p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="hero.cta">Take the first step, book a session</a>
+          <a href="#group" class="inline-flex items-center justify-center rounded-full border border-ink-invertmuted px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-navy-raised" data-i18n="hero.groups">See the group dates</a>
+        </div>
+        <p class="mt-7 text-[15px] leading-6 text-ink-invertmuted" data-i18n="hero.note">Trauma-informed care. Online sessions in English, Portuguese and Spanish.</p>
+      </div>
+
+      <!-- PENDENTE: arquivos originais das fotos. Estas saíram do PDF da Tayla (aprovadas pela Claudia),
+           em baixa resolução e sem origem ou licença conhecida. -->
+      <div class="reveal relative order-first mx-auto w-full max-w-[420px] lg:order-none lg:max-w-none">
+        <img src="imgs/web/women-at-table.jpg" alt="A group of women talking and laughing around a wooden table" data-i18n-alt="hero.alt" width="735" height="973" class="blob aspect-square w-full object-cover object-[center_35%]">
+        <div class="absolute -bottom-4 right-2 flex h-32 w-32 items-center justify-center rounded-full border-4 border-brand-midnight bg-surface p-5 sm:h-36 sm:w-36">
+          <img src="imgs/logo-full.svg" alt="" width="830" height="581" class="w-full">
+        </div>
+      </div>
+    </div>
+
+    <!-- A onda fica dentro da faixa marinho e é pintada com a cor da seção vizinha:
+         assim o mármore não é cortado na emenda. -->
+    <div class="wave wave-bottom text-surface" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 50C300 66 480 16 760 14C1040 12 1240 70 1440 36V90H0Z" fill="currentColor"/></svg>
+    </div>
+  </section>
+
+  <!-- Abordagem: texto centralizado e três cards que viram para mostrar o detalhe. -->
+  <section id="approach" class="bg-surface">
+    <div class="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 lg:pb-24">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-accent-ink" data-i18n="approach.overline">The <span translate="no">ÁtmaQatarse</span> Method</p>
+        <h2 class="mt-4 font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="approach.title">How the work is done</h2>
+        <span class="mx-auto mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+        <p class="mt-6 text-ink-muted" data-i18n="approach.text">The ÁtmaQatarse Method is a structured therapeutic approach grounded in psychodynamic and psychoanalytic principles, combined with active clinical guidance. Rather than staying only with what you feel today, it looks at the patterns underneath. It is guided by trauma-informed care, so the space stays safe, respectful and free of pressure.</p>
+      </div>
+
+      <!-- Os três blocos seguem o texto do método publicado no site atual (services.html).
+           Com mouse, o card vira; em tela de toque, frente e verso aparecem empilhados. -->
+      <div class="mt-14 grid gap-6 md:grid-cols-3">
+        <div class="flip reveal" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-face flip-front marble bg-brand-midnight text-ink-invert">
+              <svg class="h-16 w-16 text-navy-accentink" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24Z"/><circle cx="24" cy="24" r="6"/></svg>
+              <p class="mt-5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="approach.card1.label">Recognise</p>
+              <h3 class="mt-2 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card1.title">What keeps you stuck</h3>
+            </div>
+            <div class="flip-face flip-back bg-brand-gold text-brand-charcoal">
+              <p class="text-[17px] leading-7" data-i18n="approach.card1.text">You look at the unconscious patterns behind your experiences and the repetitions that keep returning in your life.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip reveal" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-face flip-front marble bg-brand-midnight text-ink-invert">
+              <svg class="h-16 w-16 text-navy-accentink" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M24 6v18"/><path d="M24 24c0 8-8 8-12 18"/><path d="M24 24c0 8 8 8 12 18"/><path d="M24 30v12"/><circle cx="24" cy="6" r="2"/></svg>
+              <p class="mt-5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="approach.card2.label">Understand</p>
+              <h3 class="mt-2 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card2.title">Where it comes from</h3>
+            </div>
+            <div class="flip-face flip-back bg-brand-gold text-brand-charcoal">
+              <p class="text-[17px] leading-7" data-i18n="approach.card2.text">You trace the origins of emotional conflict, recognising both your strengths and the impact of what you have lived through.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip reveal" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-face flip-front marble bg-brand-midnight text-ink-invert">
+              <svg class="h-16 w-16 text-navy-accentink" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 40h10V30h10V20h10V10h6"/><path d="M36 6l6 4-6 4"/></svg>
+              <p class="mt-5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="approach.card3.label">Change</p>
+              <h3 class="mt-2 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card3.title">Practical steps</h3>
+            </div>
+            <div class="flip-face flip-back bg-brand-gold text-brand-charcoal">
+              <p class="text-[17px] leading-7" data-i18n="approach.card3.text">Each session follows a clear process that connects insight with action, so you move beyond temporary relief into sustainable change.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faixa marinho em mármore: linhas alternadas de imagem e texto, como no site atual. -->
+  <section class="on-navy marble relative bg-brand-midnight text-ink-invert">
+    <div class="wave wave-top text-surface" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 0H1440V60C1180 30 980 88 700 80C420 72 240 24 0 44Z" fill="currentColor"/></svg>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl space-y-24 px-4 pb-32 pt-28 sm:px-6 lg:pb-36 lg:pt-36">
+
+      <!-- Sessões terapêuticas: individual, casal e grupo -->
+      <div id="sessions" class="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
+        <img src="imgs/web/hands-together.jpg" alt="Many hands joined at the centre of a circle" data-i18n-alt="sessions.alt" width="510" height="715" loading="lazy" class="reveal blob-alt mx-auto aspect-[4/5] w-full max-w-[380px] object-cover">
+        <div class="reveal">
+          <h2 class="font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="sessions.title">Therapeutic sessions</h2>
+          <p class="mt-3 font-serif text-[20px] italic leading-8 text-ink-invertmuted" data-i18n="sessions.subtitle">Online, in three formats.</p>
+          <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="sessions.text">Individual and couple sessions are booked in the calendar. The therapeutic group is the institute's community work and has its own dates.</p>
+
+          <!-- PENDENTE: confirmar a ferramenta de agendamento (Cal.com atual ou Halaxy). Trocar é mudar o link. -->
+          <ul class="mt-8 max-w-2xl divide-y divide-navy-line border-y border-navy-line">
+            <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4">
+              <span><strong class="font-display text-[20px] font-medium uppercase tracking-[0.04em]" data-i18n="sessions.individual">Individual</strong><span class="mt-1 block text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.individual.text">One-to-one counselling, tailored to your process and pace. In English, Portuguese or Spanish.</span></span>
+            </li>
+            <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4">
+              <span><strong class="font-display text-[20px] font-medium uppercase tracking-[0.04em]" data-i18n="sessions.couple">Couple</strong><span class="mt-1 block text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.couple.text">Counselling for couples who want to work on their relationship together.</span></span>
+            </li>
+            <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4">
+              <span><strong class="font-display text-[20px] font-medium uppercase tracking-[0.04em]" data-i18n="sessions.group">Therapeutic group</strong><span class="mt-1 block text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.group.text">Small online groups facilitated by Claudia, with registration at $0.</span></span>
+            </li>
+          </ul>
+          <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="sessions.cta">Choose a time</a>
+        </div>
+      </div>
+
+      <!-- Ágape Women's Support, projeto comunitário do instituto.
+           Texto oficial da Claudia (Arquivo 002, seção 11), sem edição. -->
+      <div id="group">
+        <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:gap-16">
+          <div class="reveal">
+            <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-ink-invertmuted" data-i18n="group.overline">Community project</p>
+            <h2 class="mt-3 font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="group.title">About <span translate="no">Ágape Women's Support</span></h2>
+            <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="group.text"><span translate="no">Ágape Women's Support</span> (AWS) is a women-centred community project created to offer accessible, respectful and welcoming spaces for reflection, listening and connection.</p>
+            <p class="mt-4 max-w-2xl text-ink-invertmuted" data-i18n="group.text2">We believe that opportunities for emotional care, self-understanding and connection should not depend solely on financial circumstances. AWS therefore seeks to create a space where experiences can be shared, heard and reflected upon, fostering understanding, connection and meaning-making.</p>
+          </div>
+          <img src="imgs/web/holding-hands.jpg" alt="Women standing in a circle, holding hands" data-i18n-alt="group.alt" width="736" height="1104" loading="lazy" class="reveal blob mx-auto aspect-[4/5] w-full max-w-[380px] object-cover object-[center_55%]">
+        </div>
+
+        <div class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          <div class="reveal border-t border-navy-line pt-6">
+            <h3 class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="group.do.title">What we do</h3>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.do.text1">AWS currently focuses on two main activities: the Women's Therapeutic Group and Blog / Reflections.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.do.text2">The Women's Therapeutic Group meets online in small, facilitated groups, creating space for reflection and dialogue around experiences that shape women's lives, including trauma, grief and loss, sexuality, the body, family, relationships, identity, boundaries and emotional overload.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.do.text3">The Blog / Reflections brings together writing related to women's experiences and the themes explored through the project, providing opportunities for continued reflection beyond the group meetings.</p>
+          </div>
+          <div class="reveal border-t border-navy-line pt-6">
+            <h3 class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="group.access.title">Accessibility and participation</h3>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.access.text1">Financial circumstances should not be a barrier to participation. For this reason, AWS groups do not have a compulsory participation fee. Participants may register for $0.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.access.text2">For those who would like to contribute towards the continuation of the project, there will also be an option to make a voluntary contribution. Financial contribution does not change access to, or the experience of, participating in the group.</p>
+          </div>
+          <div class="reveal border-t border-navy-line pt-6">
+            <h3 class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="group.founded.title">Foundation and facilitation</h3>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.founded.text1"><span translate="no">Ágape Women's Support</span> was founded by Claudia Cady, counsellor and facilitator, and has been developing since 2020.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.founded.text2">Claudia is responsible for the therapeutic direction of the project and the facilitation of the groups. Her practice is guided by attentive listening, respect for each person's individuality, and the creation of spaces where difficult experiences can be explored with care and dignity.</p>
+          </div>
+        </div>
+
+        <!-- Agenda pública: só os três grupos-piloto de 2026 (Arquivo 002, seção 2). -->
+        <div class="reveal mt-20 text-center">
+          <h3 class="font-display text-display-m font-medium uppercase" data-i18n="group.dates.title">Women's Therapeutic Group</h3>
+          <p class="mx-auto mt-4 max-w-2xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.details"><strong class="font-semibold text-ink-invert">Online via Microsoft Teams. 2 hours. Small group.</strong> Register for $0, with an optional voluntary contribution.</p>
+        </div>
+
+        <!-- PENDENTE: links da Humanitix. Preencher HUMANITIX_LINKS em js/main.js. -->
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
+            <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.october.date">31 October 2026</p>
+            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.october.title">Trauma, Grief and Loss</h3>
+            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.october.text">A space to reflect on loss, grief and traumatic experiences, held with care and safety.</p>
+            <a href="#contact" data-group="october" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
+          </article>
+          <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
+            <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.november.date">21 November 2026</p>
+            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.november.title">Women, Family and the Invisible Load</h3>
+            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.november.text">A group reflection on emotional overload, family expectations, gender roles and healthy boundaries.</p>
+            <a href="#contact" data-group="november" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
+          </article>
+          <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
+            <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.december.date">13 December 2026</p>
+            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.december.title">Women and Sexuality</h3>
+            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.december.text">A meeting to explore women's relationship with their sexuality, questioning taboos and caring for emotional wellbeing.</p>
+            <a href="#contact" data-group="december" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
+          </article>
+        </div>
+        <p class="mt-6 text-center text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.humanitix">Registration and the consent form are completed on Humanitix.</p>
+        <!-- Grupo oficial da Ágape, só administradores publicam (pedido da Claudia). Não é conversa direta com ela. -->
+        <p class="mt-1 text-center text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.whatsapp">New dates and reflections are announced in the <a href="https://chat.whatsapp.com/HRnQVfO2xon6sfMzeUYGfp" target="_blank" rel="noopener" class="font-semibold text-ink-invert underline underline-offset-4 hover:no-underline"><span translate="no">Ágape Women's Support</span> WhatsApp group</a>.</p>
+      </div>
+
+      <!-- Quem conduz: bloco curto. A página não é centrada na pessoa. -->
+      <div id="about" class="grid items-center gap-10 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:gap-16">
+        <div class="portrait reveal blob-alt mx-auto aspect-square w-full max-w-[300px] overflow-hidden bg-surface-sunken">
+          <img src="imgs/web/claudia-cady.webp" alt="Claudia Cady" width="1000" height="1000" loading="lazy" class="h-full w-full object-cover">
+        </div>
+        <div class="reveal">
+          <h2 class="font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="about.title">Who leads the work</h2>
+          <p class="mt-3 font-serif text-[20px] italic leading-8 text-ink-invertmuted">Claudia Cady</p>
+          <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="about.text">The institute is led by Claudia Cady, counsellor and psychoanalyst, registered member of the Australian Counselling Association. She has worked in counselling since 2008, with a focus on trauma, grief, life transitions and complex emotional challenges.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wave wave-bottom text-surface" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 58C260 80 460 36 720 28C980 20 1200 84 1440 48V90H0Z" fill="currentColor"/></svg>
+    </div>
+  </section>
+
+  <!-- Treinamento e supervisão -->
+  <section id="practitioners" class="bg-surface">
+    <div class="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 lg:pb-24">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <h2 class="font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="practitioners.title">For practitioners</h2>
+        <span class="mx-auto mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+        <p class="mt-6 text-ink-muted" data-i18n="practitioners.text">Training and supervision are opening in stages. Leave your details and you will hear when each one opens.</p>
+      </div>
+
+      <div class="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
+        <!-- PENDENTE: texto da Claudia sobre o treinamento (formato, público, datas). -->
+        <article id="training" class="reveal flex flex-col items-center rounded-[32px] bg-surface-sunken p-8 text-center sm:p-10">
+          <span class="rounded-full bg-surface px-4 py-1.5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-accent-ink" data-i18n="training.badge">Pilot in preparation</span>
+          <h3 class="mt-5 font-display text-[26px] font-medium uppercase leading-9 tracking-[0.04em] text-brand-midnight" data-i18n="training.title">Training</h3>
+          <p class="mb-8 mt-3 max-w-sm text-ink-muted" data-i18n="training.text">The institute is preparing its first training as a pilot program. Format and dates will be announced.</p>
+          <a href="#contact" data-interest="Training" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="training.cta">Register my interest</a>
+        </article>
+
+        <!-- PENDENTE: texto da Claudia sobre a supervisão. Início a partir de maio de 2027, depois da certificação. -->
+        <article id="supervision" class="reveal flex flex-col items-center rounded-[32px] bg-surface-sunken p-8 text-center sm:p-10">
+          <span class="rounded-full bg-surface px-4 py-1.5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-accent-ink" data-i18n="supervision.badge">From May 2027</span>
+          <h3 class="mt-5 font-display text-[26px] font-medium uppercase leading-9 tracking-[0.04em] text-brand-midnight" data-i18n="supervision.title">Supervision</h3>
+          <p class="mb-8 mt-3 max-w-sm text-ink-muted" data-i18n="supervision.text">Group supervision for practitioners, with Claudia Cady. The waiting list is open.</p>
+          <a href="#contact" data-interest="Supervision" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="supervision.cta">Join the waiting list</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos em carrossel, centralizados como no site atual. -->
+  <section class="bg-surface-sunken">
+    <div class="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
+      <h2 class="reveal font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="testimonials.title">In their words</h2>
+      <span class="mx-auto mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+
+      <div class="carousel reveal mt-10" aria-roledescription="carousel" aria-label="Testimonials" data-i18n-aria="testimonials.label">
+        <div class="carousel-track" aria-live="polite">
+          <figure class="carousel-slide is-active" aria-roledescription="slide" aria-label="1 of 3" data-i18n-aria="testimonials.slide1">
+            <blockquote class="font-serif text-[20px] italic leading-9 text-ink sm:text-[24px] sm:leading-10" data-i18n="testimonials.1">"Her guidance is precise but always gentle. I feel supported to ask the hard questions without ever feeling judged."</blockquote>
+            <figcaption class="mt-6 font-display text-[15px] font-semibold uppercase tracking-[0.12em] text-brand-midnight">E.S. <span class="font-sans font-normal normal-case tracking-normal text-ink-subtle" data-i18n="testimonials.1.place">Brazil</span></figcaption>
+          </figure>
+          <figure class="carousel-slide" aria-roledescription="slide" aria-label="2 of 3" data-i18n-aria="testimonials.slide2">
+            <blockquote class="font-serif text-[20px] italic leading-9 text-ink sm:text-[24px] sm:leading-10" data-i18n="testimonials.2">"I understand situations I hadn't before, and I feel even more confident in being myself and expressing my feelings and thoughts."</blockquote>
+            <figcaption class="mt-6 font-display text-[15px] font-semibold uppercase tracking-[0.12em] text-brand-midnight">G. <span class="font-sans font-normal normal-case tracking-normal text-ink-subtle" data-i18n="testimonials.2.place">Australia</span></figcaption>
+          </figure>
+          <figure class="carousel-slide" aria-roledescription="slide" aria-label="3 of 3" data-i18n-aria="testimonials.slide3">
+            <blockquote class="font-serif text-[20px] italic leading-9 text-ink sm:text-[24px] sm:leading-10" data-i18n="testimonials.3">"I came to Claudia at a time when I was lost as a person and especially as a woman. Through each session, I found and remembered things that I didn't even believe were so important for my evolution."</blockquote>
+            <figcaption class="mt-6 font-display text-[15px] font-semibold uppercase tracking-[0.12em] text-brand-midnight">G.C. <span class="font-sans font-normal normal-case tracking-normal text-ink-subtle">Sydney, NSW</span></figcaption>
+          </figure>
+        </div>
+        <div class="mt-8 flex items-center justify-center gap-4">
+          <button type="button" class="carousel-prev flex h-11 w-11 items-center justify-center rounded-full border border-line-strong text-brand-midnight hover:bg-action-subtle" aria-label="Previous testimonial" data-i18n-aria="testimonials.prev">
+            <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg>
+          </button>
+          <div class="carousel-dots flex gap-2"></div>
+          <button type="button" class="carousel-next flex h-11 w-11 items-center justify-center rounded-full border border-line-strong text-brand-midnight hover:bg-action-subtle" aria-label="Next testimonial" data-i18n-aria="testimonials.next">
+            <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dúvidas -->
+  <section id="questions" class="bg-surface">
+    <div class="mx-auto max-w-3xl px-4 pb-16 pt-20 sm:px-6">
+      <div class="reveal text-center">
+        <h2 class="font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="faq.title">Questions</h2>
+        <span class="mx-auto mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+      </div>
+
+      <div class="reveal mt-10 space-y-3">
+        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+          <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
+            <span data-i18n="faq.book.q">How do I book a session?</span>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.book.a">Open the online calendar with the "Book a session" button and choose a time that suits you.</p>
+        </details>
+        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+          <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
+            <span data-i18n="faq.pay.q">Do I have to pay to join the therapeutic group?</span>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.pay.a">No. You can register for $0. If you would like to support the project, there is an optional voluntary contribution. It does not change your access to the group.</p>
+        </details>
+        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+          <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
+            <span data-i18n="faq.meet.q">How do the groups meet?</span>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.meet.a">Online, via Microsoft Teams. Each meeting lasts 2 hours, in a small group facilitated by Claudia. Registration is done through Humanitix.</p>
+        </details>
+        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+          <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
+            <span data-i18n="faq.languages.q">In which languages can I have sessions?</span>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.languages.a">In English, Portuguese or Spanish. Sessions are held online.</p>
+        </details>
+        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+          <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
+            <span data-i18n="faq.start.q">When do training and supervision start?</span>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.start.a">Training starts as a pilot and its dates are still to be announced. Supervision is planned from May 2027. Leave your details below and you will be told when each one opens.</p>
+        </details>
+      </div>
+
+      <!-- Recursos globais do site atual (resources.html). O recurso do Brasil saiu, como combinado na reunião. -->
+      <div class="reveal mt-10 rounded-[24px] bg-surface-sunken p-6 sm:p-8">
+        <h3 class="text-[17px] font-semibold leading-6" data-i18n="support.title">If you need support right now</h3>
+        <p class="mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="support.text">These services offer support, information and referrals for people experiencing domestic violence.</p>
+        <ul class="mt-4 space-y-2 text-[15px] leading-6 text-ink-muted">
+          <li><a href="https://www.dvconnect.org" target="_blank" rel="noopener" class="font-semibold text-action-ink hover:underline">DVConnect</a><span data-i18n="support.au">, Australia</span></li>
+          <li><a href="https://www.womensaid.org.uk" target="_blank" rel="noopener" class="font-semibold text-action-ink hover:underline">Women's Aid</a><span data-i18n="support.uk">, United Kingdom and international</span></li>
+          <li><a href="https://www.dvsas.org" target="_blank" rel="noopener" class="font-semibold text-action-ink hover:underline">Domestic Violence Services</a><span data-i18n="support.us">, United States</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conversão -->
+  <section id="contact" class="on-navy marble relative bg-brand-midnight">
+    <div class="wave wave-top text-surface" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 0H1440V62C1220 30 1000 86 720 78C440 70 220 26 0 46Z" fill="currentColor"/></svg>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-4 pb-20 pt-28 sm:px-6 lg:pb-24 lg:pt-36">
+      <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:gap-14">
+        <div class="reveal">
+          <h2 class="font-display text-display-m font-medium uppercase text-ink-invert sm:text-display-l" data-i18n="contact.title">Start with a conversation</h2>
+          <span class="mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+          <p class="mt-6 max-w-xl text-ink-invertmuted" data-i18n="contact.text">To begin sessions, choose a time in the calendar. For training, supervision or anything else, write to Claudia using the form and she will reply.</p>
+          <p class="mt-8 max-w-xl font-serif text-[22px] italic leading-9 text-ink-invert" data-i18n="contact.quote">Depth creates freedom.</p>
+          <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="cta.book">Book a session</a>
+        </div>
+
+        <!-- Sem backend: a mensagem é montada aqui e abre pronta no aplicativo de e-mail de quem preenche.
+             Nada sai sem a pessoa apertar enviar lá. O texto do formulário diz isso.
+             Sem WhatsApp: a Claudia não quer o WhatsApp profissional como canal público (Arquivo 002, seção 3). -->
+        <form id="contact-form" novalidate class="reveal rounded-[32px] bg-surface p-7 text-ink sm:p-9">
+          <h3 class="text-[20px] font-semibold leading-7" data-i18n="form.title">Write to Claudia</h3>
+          <p class="mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="form.intro">Fill in your name and what you are looking for. The message opens ready in your email app, and it only goes out when you press send there.</p>
+          <div class="mt-6 space-y-5">
+            <div data-field>
+              <label for="name" class="block text-[15px] font-semibold leading-5" data-i18n="form.name">Your name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" class="mt-2 w-full rounded-xl border border-line-strong bg-surface-raised px-4 py-3 text-[17px] leading-6 text-ink placeholder:text-ink-subtle">
+              <p class="error-text mt-2 hidden text-[13px] font-semibold leading-5 text-danger" data-i18n="form.name.error">Enter your name.</p>
+            </div>
+            <fieldset data-field>
+              <legend class="text-[15px] font-semibold leading-5" data-i18n="form.interest">Your interest</legend>
+              <div class="mt-2 grid grid-cols-3 gap-2">
+                <label class="interest-option relative">
+                  <input type="radio" name="interest" value="Sessions" required>
+                  <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.sessions">Sessions</span>
+                </label>
+                <label class="interest-option relative">
+                  <input type="radio" name="interest" value="Training">
+                  <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.training">Training</span>
+                </label>
+                <label class="interest-option relative">
+                  <input type="radio" name="interest" value="Supervision">
+                  <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.supervision">Supervision</span>
+                </label>
+              </div>
+              <p class="error-text mt-2 hidden text-[13px] font-semibold leading-5 text-danger" data-i18n="form.interest.error">Choose one option.</p>
+            </fieldset>
+            <div>
+              <label for="message" class="block text-[15px] font-semibold leading-5"><span data-i18n="form.message">Your message</span> <span class="font-normal text-ink-subtle" data-i18n="form.optional">(optional)</span></label>
+              <textarea id="message" name="message" rows="3" class="mt-2 w-full resize-y rounded-[20px] border border-line-strong bg-surface-raised px-4 py-3 text-[17px] leading-6 text-ink placeholder:text-ink-subtle"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-action px-5 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover">
+            <svg class="h-5 w-5 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span data-i18n="form.send.email">Continue by email</span>
+          </button>
+
+          <!-- Se o aplicativo de e-mail não abrir (comum no computador), o endereço fica à vista para copiar. -->
+          <p class="mt-5 border-t border-line pt-4 text-center text-[13px] leading-5 text-ink-subtle"><span data-i18n="form.direct">Prefer to write directly?</span> <a href="mailto:agape@agapewomenssupport.com.au" class="font-semibold text-action-ink hover:underline">agape@agapewomenssupport.com.au</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Rodapé. O logotipo recebido é azul e some sobre fundo escuro: aqui o nome entra em texto. -->
+<footer class="on-navy bg-brand-charcoal">
+  <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:px-6 md:flex-row md:items-end md:justify-between">
+    <div translate="no">
+      <p class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.08em] text-ink-invert">Atma Qatarse</p>
+      <p class="text-[11px] font-semibold uppercase leading-4 tracking-[0.3em] text-navy-accentink">Institute</p>
+      <p class="mt-3 text-[13px] leading-5 text-ink-invertmuted">People · Practice · Purpose</p>
+    </div>
+    <div class="text-[13px] leading-6 text-ink-invertmuted md:text-right">
+      <!-- PENDENTE: e-mail e redes próprios do instituto. Estes são os da Ágape Women's Support. -->
+      <p><a href="mailto:agape@agapewomenssupport.com.au" class="text-navy-accentink hover:underline">agape@agapewomenssupport.com.au</a></p>
+      <p><a href="https://www.instagram.com/agapewomenssupport" target="_blank" rel="noopener" class="text-navy-accentink hover:underline">Instagram</a> · <a href="https://www.facebook.com/share/1C54jpnMUU/" target="_blank" rel="noopener" class="text-navy-accentink hover:underline">Facebook</a></p>
+      <p data-i18n="footer.rights">© 2026 Atma Qatarse Institute. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Em produção, servir o jQuery localmente. -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

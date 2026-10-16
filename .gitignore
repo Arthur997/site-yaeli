@@ -1,0 +1,16 @@
+# Só entra no repositório o que o site usa para funcionar.
+# Tudo na raiz fica de fora, exceto a página e as pastas de recursos.
+/*
+!/.gitignore
+!/index.html
+!/css/
+!/js/
+!/imgs/
+
+# Fonte do mármore: o site usa só o marble.webp gerado a partir dela.
+/imgs/marble-source.svg
+
+# Documentos de trabalho nunca sobem, em qualquer pasta.
+*.md
+*.pdf
+*.docx

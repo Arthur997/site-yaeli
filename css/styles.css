@@ -1,0 +1,280 @@
+/* Base da landing page.
+   Só o que utilitário do Tailwind não expressa. Os tokens de cor, raio, tipografia
+   e sombra ficam em js/tailwind-config.js.
+   Os hex abaixo são os de foco, ação e erro do tokens.json. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* O header é fixo: a âncora precisa parar abaixo dele. */
+section[id],
+article[id],
+div[id] {
+  scroll-margin-top: 88px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Anel de foco único em toda a página, conforme o design system. */
+:focus-visible {
+  outline: 2px solid #8a6a24;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Sobre azul-marinho vale o anel do tema escuro. O formulário é claro e mantém o padrão. */
+.on-navy :focus-visible {
+  outline-color: #d9bc7a;
+}
+.on-navy form :focus-visible {
+  outline-color: #8a6a24;
+}
+
+/* Mármore azul do guia de marca. A cor de fundo continua no utilitário bg-brand-midnight
+   e vale enquanto a imagem carrega.
+   A imagem é gerada de imgs/marble-source.svg: o filtro SVG ao vivo travava o navegador.
+   Para regenerar: npx sharp-cli -i marble-source.svg -o marble.webp -f webp -q 82 */
+.marble {
+  background-image: url('../imgs/marble.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Divisor em onda. Fica dentro da faixa marinho, pintado com a cor da seção vizinha
+   (currentColor), para o mármore seguir inteiro até a borda. */
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  pointer-events: none;
+}
+.wave-top {
+  top: -1px;
+}
+.wave-bottom {
+  bottom: -1px;
+}
+.wave svg {
+  display: block;
+  width: 100%;
+  height: 56px;
+}
+@media (min-width: 1024px) {
+  .wave svg {
+    height: 90px;
+  }
+}
+
+/* Recorte orgânico das fotos, no lugar da moldura do site atual. */
+.blob {
+  border-radius: 58% 42% 52% 48% / 46% 56% 44% 54%;
+}
+.blob-alt {
+  border-radius: 44% 56% 40% 60% / 58% 42% 58% 42%;
+}
+
+/* Card que vira: frente em mármore marinho, verso dourado.
+   Só vira com mouse; em tela de toque frente e verso ficam empilhados. */
+.flip {
+  perspective: 1200px;
+  border-radius: 32px;
+}
+.flip-inner {
+  position: relative;
+  min-height: 300px;
+  transition: transform 600ms ease;
+  transform-style: preserve-3d;
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+  border-radius: 32px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+@media (hover: hover) {
+  .flip:hover .flip-inner,
+  .flip:focus-within .flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+@media (hover: none) {
+  .flip-inner {
+    min-height: 0;
+  }
+  .flip-face {
+    position: static;
+    transform: none;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+  }
+  .flip-front {
+    border-radius: 32px 32px 0 0;
+  }
+  .flip-back {
+    border-radius: 0 0 32px 32px;
+  }
+}
+
+/* Carrossel de depoimentos: só o slide ativo aparece. */
+.carousel-slide {
+  display: none;
+}
+.carousel-slide.is-active {
+  display: block;
+  animation: fade-in 400ms ease;
+}
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #ddd5c3;
+}
+.carousel-dots button[aria-current='true'] {
+  background: #042a45;
+}
+
+/* Entrada suave ao rolar, como no site atual. Sem JavaScript nada fica escondido. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Acordeão nativo: esconde o marcador padrão e troca o sinal de mais por menos. */
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.toggle {
+  position: relative;
+  flex: none;
+  width: 14px;
+  height: 14px;
+  color: #4a5b68;
+}
+.toggle::before,
+.toggle::after {
+  content: '';
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+.toggle::after {
+  inset: 0 50% 0 auto;
+  width: 2px;
+  height: auto;
+  transform: translateX(50%);
+  transition: opacity 150ms ease;
+}
+details[open] .toggle::after {
+  opacity: 0;
+}
+
+/* Troca de idioma: o ativo fica preenchido em marinho, o outro só no texto. */
+.lang-option {
+  color: #4a5b68;
+}
+.lang-option:hover {
+  color: #042a45;
+}
+.lang-option[aria-pressed='true'] {
+  background: #042a45;
+  color: #f6f2e8;
+}
+
+/* Rádio de interesse: o controle nativo some e o rótulo vira o alvo. */
+.interest-option input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.interest-option span {
+  cursor: pointer;
+}
+.interest-option input:checked + span {
+  border-color: #042a45;
+  background: #e3e8ea;
+  color: #042a45;
+}
+.interest-option input:focus-visible + span {
+  outline: 2px solid #8a6a24;
+  outline-offset: 2px;
+}
+
+/* Campo em erro: a borda e a mensagem aparecem juntas. */
+.field-error input[type='text'] {
+  border-color: #981f2d;
+}
+.field-error .error-text {
+  display: block;
+}
+
+/* Inscrição ainda sem link: o botão avisa e não leva a lugar nenhum. */
+.registration-closed {
+  border-radius: 9999px;
+  border: 1px solid #ddd5c3;
+  background: #ece6d8;
+  color: #5b6b77;
+  cursor: default;
+}
+
+/* O retrato veio do site atual com moldura orgânica e o emblema antigo no canto.
+   O enquadramento aproxima o rosto e deixa os dois fora do quadro. */
+.portrait img {
+  transform: scale(1.7);
+  transform-origin: 40% 12%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .toggle::after,
+  .flip-inner,
+  .js .reveal {
+    transition: none;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .carousel-slide.is-active {
+    animation: none;
+  }
+}
