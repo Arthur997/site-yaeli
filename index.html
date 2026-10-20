@@ -3,9 +3,144 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atma Qatarse Institute | Counselling, training and supervision</title>
-<meta name="description" content="Atma Qatarse Institute is a counselling practice led by Claudia Cady. Sessions for individuals, couples and groups, with training and supervision for practitioners.">
+<!-- SEO: título e descrição puxam as buscas principais (online counselling, trauma-informed,
+     psicanálise, atendimento em português e espanhol na Austrália). A versão pt vem de js/i18n.js. -->
+<title>Online Counselling in Australia, Trauma-Informed | Atma Qatarse Institute</title>
+<meta name="description" content="Trauma-informed online counselling for individuals and couples with Claudia Cady, ACA-registered counsellor and psychoanalyst. Sessions in English, Portuguese and Spanish.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Claudia Cady">
+<meta name="theme-color" content="#042A45">
 <link rel="icon" type="image/png" href="imgs/favicon.png">
+<link rel="apple-touch-icon" href="imgs/favicon.png">
+
+<!-- PENDENTE: domínio próprio do instituto. Com ele definido, incluir aqui:
+     <link rel="canonical" href="https://DOMINIO/">
+     <link rel="alternate" hreflang="en" href="https://DOMINIO/">
+     <link rel="alternate" hreflang="pt-BR" href="https://DOMINIO/?lang=pt">
+     <link rel="alternate" hreflang="x-default" href="https://DOMINIO/">
+     <meta property="og:url" content="https://DOMINIO/">
+     e trocar og:image e os "url" do JSON-LD por endereços absolutos. Criar também o sitemap.xml. -->
+
+<!-- Prévia ao compartilhar em WhatsApp, Facebook, LinkedIn e afins. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atma Qatarse Institute">
+<meta property="og:title" content="Atma Qatarse Institute | Trauma-informed online counselling">
+<meta property="og:description" content="Online counselling for individuals and couples with Claudia Cady, counsellor and psychoanalyst. In English, Portuguese and Spanish.">
+<meta property="og:image" content="imgs/web/sunset-stones.jpg">
+<meta property="og:image:alt" content="Smooth stones in shallow water at sunset">
+<meta property="og:locale" content="en_AU">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Dados estruturados para o Google: instituto, Claudia, serviços, grupos (eventos) e dúvidas.
+     Datas dos grupos: tirar cada evento daqui depois que ele acontecer. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "#institute",
+      "name": "Atma Qatarse Institute",
+      "description": "Trauma-informed online counselling for individuals and couples, a women's therapeutic group, and training and supervision for practitioners.",
+      "image": "imgs/web/sunset-stones.jpg",
+      "logo": "imgs/logo-mark.png",
+      "email": "agape@agapewomenssupport.com.au",
+      "founder": { "@id": "#claudia" },
+      "areaServed": [{ "@type": "Country", "name": "Australia" }, "Worldwide (online)"],
+      "availableLanguage": ["English", "Portuguese", "Spanish"],
+      "knowsAbout": ["Counselling", "Psychoanalysis", "Psychodynamic therapy", "Trauma-informed care", "Grief and loss", "Couples counselling", "Clinical supervision"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individual online counselling", "description": "One-to-one counselling in English, Portuguese or Spanish, tailored to your process and pace." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Couples counselling online", "description": "Counselling for couples who want to work on their relationship together." } },
+          { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "itemOffered": { "@type": "Service", "name": "Women's therapeutic group", "description": "Small online groups facilitated by Claudia Cady, with free registration and an optional voluntary contribution." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Group supervision for practitioners", "description": "Group supervision for counsellors and therapists, with Claudia Cady." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Training for practitioners", "description": "Training program in the Atma Qatarse Method for counsellors and therapists." } }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "#claudia",
+      "name": "Claudia Cady",
+      "jobTitle": "Counsellor and Psychoanalyst",
+      "image": "imgs/web/claudia-cady.jpg",
+      "worksFor": { "@id": "#institute" },
+      "memberOf": { "@type": "Organization", "name": "Australian Counselling Association" },
+      "knowsLanguage": ["English", "Portuguese", "Spanish"],
+      "knowsAbout": ["Trauma", "Grief", "Life transitions", "Domestic and family violence", "Psychoanalysis", "Counselling"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "#agape",
+      "name": "Ágape Women's Support",
+      "description": "Women-centred community project offering accessible spaces for reflection, listening and connection.",
+      "founder": { "@id": "#claudia" },
+      "foundingDate": "2020",
+      "parentOrganization": { "@id": "#institute" },
+      "sameAs": ["https://www.instagram.com/agapewomenssupport", "https://www.facebook.com/share/1C54jpnMUU/"]
+    },
+    {
+      "@type": "Event",
+      "name": "Women's Therapeutic Group: Trauma, Grief and Loss",
+      "description": "A space to reflect on loss, grief and traumatic experiences, held with care and safety. Online, small group, 2 hours.",
+      "startDate": "2026-10-31",
+      "duration": "PT2H",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": { "@type": "VirtualLocation", "name": "Microsoft Teams", "url": "https://www.microsoft.com/microsoft-teams" },
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" },
+      "organizer": { "@id": "#agape" },
+      "performer": { "@id": "#claudia" },
+      "image": "imgs/web/women-sunset.jpg"
+    },
+    {
+      "@type": "Event",
+      "name": "Women's Therapeutic Group: Women, Family and the Invisible Load",
+      "description": "A group reflection on emotional overload, family expectations, gender roles and healthy boundaries. Online, small group, 2 hours.",
+      "startDate": "2026-11-21",
+      "duration": "PT2H",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": { "@type": "VirtualLocation", "name": "Microsoft Teams", "url": "https://www.microsoft.com/microsoft-teams" },
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" },
+      "organizer": { "@id": "#agape" },
+      "performer": { "@id": "#claudia" },
+      "image": "imgs/web/women-sunset.jpg"
+    },
+    {
+      "@type": "Event",
+      "name": "Women's Therapeutic Group: Women and Sexuality",
+      "description": "A meeting to explore women's relationship with their sexuality, questioning taboos and caring for emotional wellbeing. Online, small group, 2 hours.",
+      "startDate": "2026-12-13",
+      "duration": "PT2H",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": { "@type": "VirtualLocation", "name": "Microsoft Teams", "url": "https://www.microsoft.com/microsoft-teams" },
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" },
+      "organizer": { "@id": "#agape" },
+      "performer": { "@id": "#claudia" },
+      "image": "imgs/web/women-sunset.jpg"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I book a session?", "acceptedAnswer": { "@type": "Answer", "text": "Open the online calendar with the \"Book a session\" button and choose a time that suits you." } },
+        { "@type": "Question", "name": "Do I have to pay to join the therapeutic group?", "acceptedAnswer": { "@type": "Answer", "text": "No. You can register for $0. If you would like to support the project, there is an optional voluntary contribution. It does not change your access to the group." } },
+        { "@type": "Question", "name": "How do the groups meet?", "acceptedAnswer": { "@type": "Answer", "text": "Online, via Microsoft Teams. Each meeting lasts 2 hours, in a small group facilitated by Claudia. Registration is done through Humanitix." } },
+        { "@type": "Question", "name": "In which languages can I have sessions?", "acceptedAnswer": { "@type": "Answer", "text": "In English, Portuguese or Spanish. Sessions are held online." } },
+        { "@type": "Question", "name": "When do training and supervision start?", "acceptedAnswer": { "@type": "Answer", "text": "Training starts as a pilot and its dates are still to be announced. Supervision is planned from May 2027. Leave your details below and you will be told when each one opens." } }
+      ]
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Libre+Baskerville:ital@1&family=Source+Sans+3:wght@400;600&display=swap">
@@ -68,10 +203,9 @@
         <p class="mt-7 text-[15px] leading-6 text-ink-invertmuted" data-i18n="hero.note">Trauma-informed care. Online sessions in English, Portuguese and Spanish.</p>
       </div>
 
-      <!-- PENDENTE: arquivos originais das fotos. Estas saíram do PDF da Tayla (aprovadas pela Claudia),
-           em baixa resolução e sem origem ou licença conhecida. -->
+      <!-- Fotos do Website Review (out/2026), recorte circular com filete dourado. -->
       <div class="reveal relative order-first mx-auto w-full max-w-[420px] lg:order-none lg:max-w-none">
-        <img src="imgs/web/women-at-table.jpg" alt="A group of women talking and laughing around a wooden table" data-i18n-alt="hero.alt" width="735" height="973" class="blob aspect-square w-full object-cover object-[center_35%]">
+        <img src="imgs/web/sunset-stones.jpg" alt="Smooth stones in shallow water at sunset" data-i18n-alt="hero.alt" width="1885" height="834" fetchpriority="high" class="aspect-square w-full rounded-full border-2 border-brand-gold object-cover object-[60%_center]">
         <div class="absolute -bottom-4 right-2 flex h-32 w-32 items-center justify-center rounded-full border-4 border-brand-midnight bg-surface p-5 sm:h-36 sm:w-36">
           <img src="imgs/logo-full.svg" alt="" width="830" height="581" class="w-full">
         </div>
@@ -95,18 +229,17 @@
         <p class="mt-6 text-ink-muted" data-i18n="approach.text">The ÁtmaQatarse Method is a structured therapeutic approach grounded in psychodynamic and psychoanalytic principles, combined with active clinical guidance. Rather than staying only with what you feel today, it looks at the patterns underneath. It is guided by trauma-informed care, so the space stays safe, respectful and free of pressure.</p>
       </div>
 
-      <!-- Os três blocos seguem o texto do método publicado no site atual (services.html).
+      <!-- Título e verso dos cards conforme o Website Review (out/2026).
            Com mouse, o card vira; em tela de toque, frente e verso aparecem empilhados. -->
       <div class="mt-14 grid gap-6 md:grid-cols-3">
         <div class="flip reveal" tabindex="0">
           <div class="flip-inner">
             <div class="flip-face flip-front marble bg-brand-midnight text-ink-invert">
               <svg class="h-16 w-16 text-navy-accentink" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24Z"/><circle cx="24" cy="24" r="6"/></svg>
-              <p class="mt-5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="approach.card1.label">Recognise</p>
-              <h3 class="mt-2 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card1.title">What keeps you stuck</h3>
+              <h3 class="mt-5 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card1.title">Recognise</h3>
             </div>
             <div class="flip-face flip-back bg-brand-gold text-brand-charcoal">
-              <p class="text-[17px] leading-7" data-i18n="approach.card1.text">You look at the unconscious patterns behind your experiences and the repetitions that keep returning in your life.</p>
+              <p class="text-[17px] leading-7" data-i18n="approach.card1.text">Explore emotional experiences, unconscious patterns and recurring responses that may influence how you feel, relate and navigate life.</p>
             </div>
           </div>
         </div>
@@ -115,11 +248,10 @@
           <div class="flip-inner">
             <div class="flip-face flip-front marble bg-brand-midnight text-ink-invert">
               <svg class="h-16 w-16 text-navy-accentink" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M24 6v18"/><path d="M24 24c0 8-8 8-12 18"/><path d="M24 24c0 8 8 8 12 18"/><path d="M24 30v12"/><circle cx="24" cy="6" r="2"/></svg>
-              <p class="mt-5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="approach.card2.label">Understand</p>
-              <h3 class="mt-2 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card2.title">Where it comes from</h3>
+              <h3 class="mt-5 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card2.title">Understand</h3>
             </div>
             <div class="flip-face flip-back bg-brand-gold text-brand-charcoal">
-              <p class="text-[17px] leading-7" data-i18n="approach.card2.text">You trace the origins of emotional conflict, recognising both your strengths and the impact of what you have lived through.</p>
+              <p class="text-[17px] leading-7" data-i18n="approach.card2.text">Develop a deeper understanding of how personal history, relationships and lived experiences may shape your present, recognising both vulnerabilities and strengths.</p>
             </div>
           </div>
         </div>
@@ -128,11 +260,10 @@
           <div class="flip-inner">
             <div class="flip-face flip-front marble bg-brand-midnight text-ink-invert">
               <svg class="h-16 w-16 text-navy-accentink" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 40h10V30h10V20h10V10h6"/><path d="M36 6l6 4-6 4"/></svg>
-              <p class="mt-5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="approach.card3.label">Change</p>
-              <h3 class="mt-2 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card3.title">Practical steps</h3>
+              <h3 class="mt-5 font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="approach.card3.title">Change</h3>
             </div>
             <div class="flip-face flip-back bg-brand-gold text-brand-charcoal">
-              <p class="text-[17px] leading-7" data-i18n="approach.card3.text">Each session follows a clear process that connects insight with action, so you move beyond temporary relief into sustainable change.</p>
+              <p class="text-[17px] leading-7" data-i18n="approach.card3.text">Bring awareness and understanding into everyday life, opening space for conscious choices, new possibilities and meaningful change at your own pace.</p>
             </div>
           </div>
         </div>
@@ -150,7 +281,7 @@
 
       <!-- Sessões terapêuticas: individual, casal e grupo -->
       <div id="sessions" class="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
-        <img src="imgs/web/hands-together.jpg" alt="Many hands joined at the centre of a circle" data-i18n-alt="sessions.alt" width="510" height="715" loading="lazy" class="reveal blob-alt mx-auto aspect-[4/5] w-full max-w-[380px] object-cover">
+        <img src="imgs/web/armchair-light.jpg" alt="A soft armchair and a plant in warm afternoon light" data-i18n-alt="sessions.alt" width="940" height="900" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
         <div class="reveal">
           <h2 class="font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="sessions.title">Therapeutic sessions</h2>
           <p class="mt-3 font-serif text-[20px] italic leading-8 text-ink-invertmuted" data-i18n="sessions.subtitle">Online, in three formats.</p>
@@ -182,7 +313,7 @@
             <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="group.text"><span translate="no">Ágape Women's Support</span> (AWS) is a women-centred community project created to offer accessible, respectful and welcoming spaces for reflection, listening and connection.</p>
             <p class="mt-4 max-w-2xl text-ink-invertmuted" data-i18n="group.text2">We believe that opportunities for emotional care, self-understanding and connection should not depend solely on financial circumstances. AWS therefore seeks to create a space where experiences can be shared, heard and reflected upon, fostering understanding, connection and meaning-making.</p>
           </div>
-          <img src="imgs/web/holding-hands.jpg" alt="Women standing in a circle, holding hands" data-i18n-alt="group.alt" width="736" height="1104" loading="lazy" class="reveal blob mx-auto aspect-[4/5] w-full max-w-[380px] object-cover object-[center_55%]">
+          <img src="imgs/web/women-sunset.jpg" alt="Three women embracing as they watch the sunset" data-i18n-alt="group.alt" width="934" height="900" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
         </div>
 
         <div class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
@@ -237,10 +368,8 @@
       </div>
 
       <!-- Quem conduz: bloco curto. A página não é centrada na pessoa. -->
-      <div id="about" class="grid items-center gap-10 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:gap-16">
-        <div class="portrait reveal blob-alt mx-auto aspect-square w-full max-w-[300px] overflow-hidden bg-surface-sunken">
-          <img src="imgs/web/claudia-cady.webp" alt="Claudia Cady" width="1000" height="1000" loading="lazy" class="h-full w-full object-cover">
-        </div>
+      <div id="about" class="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
+        <img src="imgs/web/claudia-cady.jpg" alt="Claudia Cady" width="900" height="900" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
         <div class="reveal">
           <h2 class="font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="about.title">Who leads the work</h2>
           <p class="mt-3 font-serif text-[20px] italic leading-8 text-ink-invertmuted">Claudia Cady</p>

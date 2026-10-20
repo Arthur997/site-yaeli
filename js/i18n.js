@@ -7,8 +7,8 @@
 
 window.AQ_I18N = {
   en: {
-    'meta.title': 'Atma Qatarse Institute | Counselling, training and supervision',
-    'meta.description': 'Atma Qatarse Institute is a counselling practice led by Claudia Cady. Sessions for individuals, couples and groups, with training and supervision for practitioners.',
+    'meta.title': 'Online Counselling in Australia, Trauma-Informed | Atma Qatarse Institute',
+    'meta.description': 'Trauma-informed online counselling for individuals and couples with Claudia Cady, ACA-registered counsellor and psychoanalyst. Sessions in English, Portuguese and Spanish.',
     'carousel.dot': 'Show testimonial {n}',
     'message.greeting': 'Hello Claudia,',
     'message.name': 'My name is {name}.',
@@ -16,8 +16,8 @@ window.AQ_I18N = {
   },
 
   pt: {
-    'meta.title': 'Atma Qatarse Institute | Terapia, formação e supervisão',
-    'meta.description': 'O Atma Qatarse Institute é um espaço terapêutico conduzido por Claudia Cady. Atendimentos individuais, de casal e em grupo, com formação e supervisão para profissionais.',
+    'meta.title': 'Terapia Online em Português na Austrália | Atma Qatarse Institute',
+    'meta.description': 'Terapia online individual e de casal com Claudia Cady, psicanalista e counsellor registrada na Australian Counselling Association. Atendimento em português, inglês e espanhol.',
     'carousel.dot': 'Mostrar depoimento {n}',
     'message.greeting': 'Olá, Claudia,',
     'message.name': 'Meu nome é {name}.',
@@ -40,24 +40,21 @@ window.AQ_I18N = {
     'hero.cta': 'Dê o primeiro passo: agende uma sessão',
     'hero.groups': 'Ver as datas dos grupos',
     'hero.note': 'Cuidado informado pelo trauma. Atendimento online em português, inglês e espanhol.',
-    'hero.alt': 'Grupo de mulheres conversando e rindo em volta de uma mesa de madeira',
+    'hero.alt': 'Pedras lisas na água rasa ao pôr do sol',
 
     /* Abordagem */
     'approach.overline': 'O Método <span translate="no">ÁtmaQatarse</span>',
     'approach.title': 'Como o trabalho acontece',
     'approach.text': 'O Método ÁtmaQatarse é uma abordagem terapêutica estruturada, fundamentada em princípios psicodinâmicos e psicanalíticos e combinada com uma condução clínica ativa. Em vez de ficar só no que você sente hoje, ele olha para os padrões que estão por baixo. Todo o processo segue o cuidado informado pelo trauma, para que o espaço continue seguro, respeitoso e sem pressão.',
-    'approach.card1.label': 'Reconhecer',
-    'approach.card1.title': 'O que te prende',
-    'approach.card1.text': 'Você olha para os padrões inconscientes por trás das suas experiências e para as repetições que insistem em voltar na sua vida.',
-    'approach.card2.label': 'Compreender',
-    'approach.card2.title': 'De onde isso vem',
-    'approach.card2.text': 'Você busca a origem dos conflitos emocionais, reconhecendo tanto as suas forças quanto o impacto do que viveu.',
-    'approach.card3.label': 'Transformar',
-    'approach.card3.title': 'Passos práticos',
-    'approach.card3.text': 'Cada sessão segue um processo claro, que liga a compreensão à ação, para você ir além do alívio passageiro e chegar a uma mudança que se sustenta.',
+    'approach.card1.title': 'Reconhecer',
+    'approach.card1.text': 'Explorar experiências emocionais, padrões inconscientes e respostas recorrentes que podem influenciar a forma como você sente, se relaciona e conduz a vida.',
+    'approach.card2.title': 'Compreender',
+    'approach.card2.text': 'Aprofundar a compreensão de como a história pessoal, os relacionamentos e as experiências vividas podem moldar o seu presente, reconhecendo tanto as vulnerabilidades quanto as forças.',
+    'approach.card3.title': 'Transformar',
+    'approach.card3.text': 'Levar consciência e compreensão para o dia a dia, abrindo espaço para escolhas conscientes, novas possibilidades e mudanças significativas, no seu próprio ritmo.',
 
     /* Atendimentos */
-    'sessions.alt': 'Muitas mãos unidas no centro de um círculo',
+    'sessions.alt': 'Poltrona macia e uma planta sob a luz quente da tarde',
     'sessions.title': 'Atendimento terapêutico',
     'sessions.subtitle': 'Online, em três formatos.',
     'sessions.text': 'Sessões individuais e de casal são marcadas pela agenda. O grupo terapêutico é o trabalho comunitário do instituto e tem datas próprias.',
@@ -86,7 +83,7 @@ window.AQ_I18N = {
     'group.founded.text2': 'Claudia é responsável pela direção terapêutica do projeto e pela facilitação dos grupos. Sua prática é orientada pela escuta atenta, pelo respeito à singularidade de cada pessoa e pela criação de espaços nos quais experiências difíceis possam ser exploradas com cuidado e dignidade.',
     'group.dates.title': 'Grupo Terapêutico para Mulheres',
     'group.details': '<strong class="font-semibold text-ink-invert">Online pelo Microsoft Teams. 2 horas. Grupo pequeno.</strong> Inscrição por $0, com contribuição voluntária opcional.',
-    'group.alt': 'Mulheres em círculo, de mãos dadas',
+    'group.alt': 'Três mulheres abraçadas olhando o pôr do sol',
     'group.october.date': '31 de outubro de 2026',
     'group.october.title': 'Trauma, Luto e Perda',
     'group.october.text': 'Um espaço de acolhimento e reflexão sobre perdas, luto e experiências traumáticas, com cuidado e segurança.',

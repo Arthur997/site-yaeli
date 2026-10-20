@@ -37,12 +37,15 @@ body {
 /* Mármore azul do guia de marca. A cor de fundo continua no utilitário bg-brand-midnight
    e vale enquanto a imagem carrega.
    A imagem é gerada de imgs/marble-source.svg: o filtro SVG ao vivo travava o navegador.
-   Para regenerar: npx sharp-cli -i marble-source.svg -o marble.webp -f webp -q 82 */
+   Para regenerar (1,5x, nítido em tela retina):
+   npx sharp-cli -i marble-source.svg -o marble.webp --density 108 -f webp -q 78
+   Escala fixa em vez de cover: cover ampliava a imagem nas faixas altas e ela borrava.
+   O ladrilho é espelhado na vertical, então repetir não deixa emenda. */
 .marble {
   background-image: url('../imgs/marble.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: max(100%, 1920px) auto;
+  background-position: center top;
+  background-repeat: repeat-y;
 }
 
 /* Divisor em onda. Fica dentro da faixa marinho, pintado com a cor da seção vizinha
@@ -69,14 +72,6 @@ body {
   .wave svg {
     height: 90px;
   }
-}
-
-/* Recorte orgânico das fotos, no lugar da moldura do site atual. */
-.blob {
-  border-radius: 58% 42% 52% 48% / 46% 56% 44% 54%;
-}
-.blob-alt {
-  border-radius: 44% 56% 40% 60% / 58% 42% 58% 42%;
 }
 
 /* Card que vira: frente em mármore marinho, verso dourado.
@@ -252,13 +247,6 @@ details[open] .toggle::after {
   background: #ece6d8;
   color: #5b6b77;
   cursor: default;
-}
-
-/* O retrato veio do site atual com moldura orgânica e o emblema antigo no canto.
-   O enquadramento aproxima o rosto e deixa os dois fora do quadro. */
-.portrait img {
-  transform: scale(1.7);
-  transform-origin: 40% 12%;
 }
 
 @media (prefers-reduced-motion: reduce) {
