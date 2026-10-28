@@ -193,7 +193,8 @@
 
       <!-- Fotos do Website Review (out/2026), recorte circular com filete dourado. -->
       <div class="reveal relative order-first mx-auto w-full max-w-[420px] lg:order-none lg:max-w-none">
-        <img src="imgs/web/sunset-stones.jpg" alt="Smooth stones in shallow water at sunset" data-i18n-alt="hero.alt" width="1885" height="834" fetchpriority="high" class="aspect-square w-full rounded-full border-2 border-brand-gold object-cover object-[60%_center]">
+        <!-- Mesma foto de "Who leads the work", espelhada para não repetir igual na página. -->
+        <img src="imgs/web/claudia-cady.jpg" alt="Claudia Cady" data-i18n-alt="hero.alt" width="900" height="900" fetchpriority="high" class="aspect-square w-full -scale-x-100 rounded-full border-2 border-brand-gold object-cover">
         <div class="absolute -bottom-4 right-2 flex h-32 w-32 items-center justify-center rounded-full border-4 border-brand-midnight bg-surface p-5 sm:h-36 sm:w-36">
           <img src="imgs/logo-full.svg" alt="" width="830" height="581" class="w-full">
         </div>
@@ -279,7 +280,7 @@
           </div>
         </div>
 
-        <div class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+        <div class="mt-14 grid gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           <div class="reveal border-t border-navy-line pt-6">
             <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="sessions.online">Online Counselling</p>
             <h3 class="mt-4 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.individual">Individual Counselling</h3>
@@ -295,29 +296,36 @@
             <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mobile.text2">Mobile appointments may be arranged across the regional area between Wagga Wagga and Wodonga, subject to location and availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
           </div>
 
-          <div class="reveal border-t border-navy-line pt-6">
+          <!-- Terceira categoria ocupa duas colunas: Ágape e mentoria lado a lado, sob o mesmo rótulo. -->
+          <div class="reveal border-t border-navy-line pt-6 md:col-span-2">
             <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="sessions.development">Group &amp; Professional Development</p>
-            <h3 class="mt-4 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.agape"><span translate="no">Ágape</span> Project: Community Support Groups</h3>
-            <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text1">Through <span translate="no">Ágape Women's Support</span>, Atma Qatarse Institute offers free community initiatives that bring women together in a supportive environment for reflection, connection and shared understanding.</p>
-            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text2">Our activities include online support groups addressing women's emotional wellbeing, relationships and experiences of domestic and family violence, with an emphasis on dignity, safety and the importance of supportive relationships.</p>
-            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text3">Healthcare professionals and community organisations are welcome to enquire about these initiatives and explore appropriate opportunities for referral.</p>
-            <!-- Inscrição própria pela Humanitix. Sem link em EXTERNAL_LINKS (js/main.js), leva às datas na página. -->
-            <a href="#group" data-link="agape" class="mt-5 inline-flex items-center justify-center rounded-full border border-ink-invertmuted px-5 py-3 text-center text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-navy-raised"><span data-i18n="sessions.agape.cta">Explore <span translate="no">Ágape</span> Community Activities</span></a>
-            <p class="mt-3 text-[13px] leading-5 text-ink-invertmuted" data-i18n="sessions.agape.note">Participation is free and subject to programme availability and suitability.</p>
+            <div class="grid gap-10 sm:grid-cols-2 sm:gap-8">
+              <div>
+                <h3 class="mt-4 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.agape"><span translate="no">Ágape</span> Project: Community Support Groups</h3>
+                <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text1">Through <span translate="no">Ágape Women's Support</span>, Atma Qatarse Institute offers free community initiatives that bring women together in a supportive environment for reflection, connection and shared understanding.</p>
+                <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text2">Our activities include online support groups addressing women's emotional wellbeing, relationships and experiences of domestic and family violence, with an emphasis on dignity, safety and the importance of supportive relationships.</p>
+                <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text3">Healthcare professionals and community organisations are welcome to enquire about these initiatives and explore appropriate opportunities for referral.</p>
+                <!-- Inscrição própria pela Humanitix. Sem link em EXTERNAL_LINKS (js/main.js), leva às datas na página. -->
+                <a href="#group" data-link="agape" class="mt-5 inline-flex items-center justify-center rounded-full border border-ink-invertmuted px-5 py-3 text-center text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-navy-raised"><span data-i18n="sessions.agape.cta">Explore <span translate="no">Ágape</span> Community Activities</span></a>
+                <p class="mt-3 text-[13px] leading-5 text-ink-invertmuted" data-i18n="sessions.agape.note">Participation is free and subject to programme availability and suitability.</p>
+              </div>
 
-            <!-- Mentoria, não supervisão reconhecida pela ACA: a supervisão só abre depois do registro da Claudia como supervisora. -->
-            <h3 class="mt-8 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.mentoring">Professional Mentoring for New Counsellors</h3>
-            <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mentoring.text1">For newly qualified counsellors beginning their professional journey, individual mentoring offers a space to explore the transition from training into practice, professional identity, ethical considerations and the practical challenges of establishing a counselling career.</p>
-            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mentoring.text2">Individual appointments and a structured three-session mentoring package are available.</p>
+              <!-- Mentoria, não supervisão reconhecida pela ACA: a supervisão só abre depois do registro da Claudia como supervisora. -->
+              <div>
+                <h3 class="mt-4 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.mentoring">Professional Mentoring for New Counsellors</h3>
+                <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mentoring.text1">For newly qualified counsellors beginning their professional journey, individual mentoring offers a space to explore the transition from training into practice, professional identity, ethical considerations and the practical challenges of establishing a counselling career.</p>
+                <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mentoring.text2">Individual appointments and a structured three-session mentoring package are available.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Local e área de atendimento: logo depois dos serviços e antes do agendamento. -->
-        <div class="reveal mt-14 rounded-[32px] border border-navy-line bg-navy-raised p-7 sm:p-9">
-          <h3 class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="location.title">Location &amp; Availability</h3>
-          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="location.text1">Based in Henty, New South Wales, Atma Qatarse Institute offers online counselling across Australia, alongside mobile counselling services in selected regional communities between Wagga Wagga and Wodonga.</p>
-          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="location.text2">Home visits are available by arrangement and subject to location, suitability and appointment availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
-          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="location.text3">Sessions are available in English, Portuguese and Spanish.</p>
+        <div class="reveal mt-14 rounded-[32px] bg-surface p-7 text-ink sm:p-9">
+          <h3 class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em] text-brand-midnight" data-i18n="location.title">Location &amp; Availability</h3>
+          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-muted" data-i18n="location.text1">Based in Henty, New South Wales, Atma Qatarse Institute offers online counselling across Australia, alongside mobile counselling services in selected regional communities between Wagga Wagga and Wodonga.</p>
+          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-muted" data-i18n="location.text2">Home visits are available by arrangement and subject to location, suitability and appointment availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
+          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-muted" data-i18n="location.text3">Sessions are available in English, Portuguese and Spanish.</p>
         </div>
 
         <!-- Agendamento: tudo pelo Cal.com, menos os grupos da Ágape, que têm botão próprio acima. -->

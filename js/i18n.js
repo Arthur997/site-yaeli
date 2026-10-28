@@ -45,7 +45,7 @@ window.AQ_I18N = {
     'hero.cta': 'Dê o primeiro passo: agende uma sessão',
     'hero.groups': 'Ver as datas dos grupos',
     'hero.note': 'Cuidado informado pelo trauma. Atendimento em português, inglês e espanhol.',
-    'hero.alt': 'Pedras lisas na água rasa ao pôr do sol',
+    'hero.alt': 'Claudia Cady',
 
     /* Abordagem */
     'approach.overline': 'O Método <span translate="no">ÁtmaQatarse</span>',
