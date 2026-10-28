@@ -240,38 +240,109 @@ details[open] .toggle::after {
   display: block;
 }
 
-/* Abas de Sessions sobre o marinho: a ativa fica preenchida em dourado, as outras só com contorno. */
+/* Seletor das abas de Sessions: barra clara com o nome de cada aba sempre à vista.
+   O marcador marinho fica atrás da aba ativa e desliza até a escolhida (posição em js/main.js). */
+.tab-bar {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 20px;
+  background: #ece6d8;
+}
+.tab-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 14px;
+  background: #042a45;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1), width 400ms cubic-bezier(0.4, 0, 0.2, 1), height 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .tab {
-  border: 1px solid #b4c3cf;
-  border-radius: 9999px;
-  padding: 12px 20px;
+  position: relative;
+  min-height: 52px;
+  padding: 8px 20px;
+  border-radius: 14px;
+  color: #4a5b68;
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #f6f2e8;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 300ms ease, color 300ms ease;
 }
 .tab:hover {
-  background: #0b3554;
+  background: #e3e8ea;
+  color: #042a45;
 }
-.tab[aria-selected='true'] {
-  border-color: #ad8b43;
-  background: #ad8b43;
-  color: #0f1d28;
+/* A cor de fundo da aba ativa vem do marcador; ela só troca a cor do texto. */
+.tab[aria-selected='true'],
+.tab[aria-selected='true']:hover {
+  background: transparent;
+  color: #f6f2e8;
+}
+/* Sem JavaScript não há marcador: a aba ativa pinta o próprio fundo. */
+html:not(.js) .tab[aria-selected='true'] {
+  background: #042a45;
+}
+/* No celular as três abas não cabem lado a lado: a barra empilha e ocupa a largura toda. */
+@media (max-width: 639px) {
+  .tab-bar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .tab {
+    text-align: left;
+  }
+}
+/* O anel de foco claro do marinho some sobre a barra clara e os cards claros. */
+.on-navy .tab-bar :focus-visible,
+.on-navy .tab-panel :focus-visible {
+  outline-color: #8a6a24;
+}
+
+/* Painéis: o novo entra deslizando do lado da aba escolhida, e a altura acompanha
+   (controlada em js/main.js) para o conteúdo abaixo não pular. */
+.tab-panels {
+  transition: height 350ms ease;
 }
 .tab-panel[hidden] {
   display: none;
 }
-.tab-panel:not([hidden]) {
-  animation: fade-in 300ms ease;
+.tab-panel[data-enter='right'] {
+  animation: tab-in-right 400ms ease both;
+}
+.tab-panel[data-enter='left'] {
+  animation: tab-in-left 400ms ease both;
+}
+@keyframes tab-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes tab-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-/* Inscrição ainda sem link: o botão avisa e não leva a lugar nenhum. */
+/* Inscrição ainda sem link: o botão avisa e não leva a lugar nenhum.
+   Fundo claro para se destacar sobre os cards em bege. */
 .registration-closed {
   border-radius: 9999px;
   border: 1px solid #ddd5c3;
-  background: #ece6d8;
+  background: #f6f2e8;
   color: #5b6b77;
   cursor: default;
 }
@@ -290,7 +361,12 @@ details[open] .toggle::after {
     transform: none;
   }
   .carousel-slide.is-active,
-  .tab-panel:not([hidden]) {
+  .tab-panel[data-enter] {
     animation: none;
+  }
+  .tab,
+  .tab-indicator,
+  .tab-panels {
+    transition: none;
   }
 }

@@ -284,59 +284,65 @@
         <!-- Abas por categoria: só o texto da aba escolhida aparece. Sem JavaScript, as três ficam abertas.
              A troca acontece na própria seção, sem mudar o endereço. -->
         <div class="tabs reveal mt-14">
-          <div class="flex flex-wrap gap-2 border-b border-navy-line pb-6" role="tablist" aria-label="Service categories" data-i18n-aria="sessions.tabs.label">
-            <button type="button" id="tab-online" class="tab" role="tab" aria-selected="true" aria-controls="panel-online" data-i18n="sessions.online">Online Counselling</button>
-            <button type="button" id="tab-facetoface" class="tab" role="tab" aria-selected="false" aria-controls="panel-facetoface" tabindex="-1" data-i18n="sessions.facetoface">Face-to-Face Services</button>
-            <button type="button" id="tab-development" class="tab" role="tab" aria-selected="false" aria-controls="panel-development" tabindex="-1" data-i18n="sessions.development">Group &amp; Professional Development</button>
+          <!-- Seletor em barra: o marcador (tab-indicator) desliza até a aba ativa. No celular as abas ficam empilhadas. -->
+          <div class="flex justify-center">
+            <div class="tab-bar" role="tablist" aria-label="Service categories" data-i18n-aria="sessions.tabs.label">
+              <span class="tab-indicator" aria-hidden="true"></span>
+              <button type="button" id="tab-online" class="tab" role="tab" aria-selected="true" aria-controls="panel-online"><span class="tab-label" data-i18n="sessions.online">Online Counselling</span></button>
+              <button type="button" id="tab-facetoface" class="tab" role="tab" aria-selected="false" aria-controls="panel-facetoface" tabindex="-1"><span class="tab-label" data-i18n="sessions.facetoface">Face-to-Face Services</span></button>
+              <button type="button" id="tab-development" class="tab" role="tab" aria-selected="false" aria-controls="panel-development" tabindex="-1"><span class="tab-label" data-i18n="sessions.development">Group &amp; Professional Development</span></button>
+            </div>
           </div>
 
-          <div id="panel-online" class="tab-panel grid gap-6 pt-8 md:grid-cols-2" role="tabpanel" aria-labelledby="tab-online" tabindex="0">
-            <article class="rounded-[32px] border border-navy-line bg-navy-raised p-7 sm:p-9">
-              <h3 class="font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.individual">Individual Counselling</h3>
-              <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
-              <p class="mt-4 text-ink-invertmuted" data-i18n="sessions.individual.text">A space to explore emotional difficulties, trauma, grief, relationships and life transitions through attentive, individualised therapeutic support.</p>
-            </article>
-            <article class="rounded-[32px] border border-navy-line bg-navy-raised p-7 sm:p-9">
-              <h3 class="font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.couple">Couples Counselling</h3>
-              <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
-              <p class="mt-4 text-ink-invertmuted" data-i18n="sessions.couple.text">An opportunity for couples to explore relationship patterns, communication, emotional difficulties and the ways they relate to one another, in a supportive and reflective space.</p>
-            </article>
-          </div>
+          <div class="tab-panels">
+            <div id="panel-online" class="tab-panel grid gap-6 pt-8 md:grid-cols-2" role="tabpanel" aria-labelledby="tab-online" tabindex="0">
+              <article class="rounded-[32px] bg-surface-sunken p-7 text-ink sm:p-9">
+                <h3 class="font-display text-[22px] text-brand-midnight font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.individual">Individual Counselling</h3>
+                <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
+                <p class="mt-4 text-ink-muted" data-i18n="sessions.individual.text">A space to explore emotional difficulties, trauma, grief, relationships and life transitions through attentive, individualised therapeutic support.</p>
+              </article>
+              <article class="rounded-[32px] bg-surface-sunken p-7 text-ink sm:p-9">
+                <h3 class="font-display text-[22px] text-brand-midnight font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.couple">Couples Counselling</h3>
+                <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
+                <p class="mt-4 text-ink-muted" data-i18n="sessions.couple.text">An opportunity for couples to explore relationship patterns, communication, emotional difficulties and the ways they relate to one another, in a supportive and reflective space.</p>
+              </article>
+            </div>
 
-          <div id="panel-facetoface" class="tab-panel pt-8" role="tabpanel" aria-labelledby="tab-facetoface" tabindex="0">
-            <article class="rounded-[32px] border border-navy-line bg-navy-raised p-7 sm:p-9">
-              <h3 class="font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.mobile">Mobile Counselling: Home &amp; Community Visits</h3>
-              <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
-              <div class="mt-4 grid gap-4 md:grid-cols-2 md:gap-8">
-                <p class="text-ink-invertmuted" data-i18n="sessions.mobile.text1">Counselling is also available through home and community visits for people who experience difficulties accessing traditional services, including older adults, rural residents and individuals with mobility or transport limitations.</p>
-                <p class="text-ink-invertmuted" data-i18n="sessions.mobile.text2">Mobile appointments may be arranged across the regional area between Wagga Wagga and Wodonga, subject to location and availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
-              </div>
-            </article>
-          </div>
+            <div id="panel-facetoface" class="tab-panel pt-8" role="tabpanel" aria-labelledby="tab-facetoface" tabindex="0">
+              <article class="rounded-[32px] bg-surface-sunken p-7 text-ink sm:p-9">
+                <h3 class="font-display text-[22px] text-brand-midnight font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.mobile">Mobile Counselling: Home &amp; Community Visits</h3>
+                <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
+                <div class="mt-4 grid gap-4 md:grid-cols-2 md:gap-8">
+                  <p class="text-ink-muted" data-i18n="sessions.mobile.text1">Counselling is also available through home and community visits for people who experience difficulties accessing traditional services, including older adults, rural residents and individuals with mobility or transport limitations.</p>
+                  <p class="text-ink-muted" data-i18n="sessions.mobile.text2">Mobile appointments may be arranged across the regional area between Wagga Wagga and Wodonga, subject to location and availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
+                </div>
+              </article>
+            </div>
 
-          <div id="panel-development" class="tab-panel grid gap-6 pt-8 md:grid-cols-2" role="tabpanel" aria-labelledby="tab-development" tabindex="0">
-            <article class="flex flex-col rounded-[32px] border border-navy-line bg-navy-raised p-7 sm:p-9">
-              <h3 class="font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.agape"><span translate="no">Ágape</span> Project: Community Support Groups</h3>
-              <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
-              <p class="mt-4 text-ink-invertmuted" data-i18n="sessions.agape.text1">Through <span translate="no">Ágape Women's Support</span>, Atma Qatarse Institute offers free community initiatives that bring women together in a supportive environment for reflection, connection and shared understanding.</p>
-              <p class="mt-3 text-ink-invertmuted" data-i18n="sessions.agape.text2">Our activities include online support groups addressing women's emotional wellbeing, relationships and experiences of domestic and family violence, with an emphasis on dignity, safety and the importance of supportive relationships.</p>
-              <p class="mb-6 mt-3 text-ink-invertmuted" data-i18n="sessions.agape.text3">Healthcare professionals and community organisations are welcome to enquire about these initiatives and explore appropriate opportunities for referral.</p>
-              <!-- Inscrição própria pela Humanitix. Sem link em EXTERNAL_LINKS (js/main.js), leva às datas na página. -->
-              <a href="#group" data-link="agape" class="mt-auto inline-flex items-center justify-center self-start rounded-full border border-ink-invertmuted px-5 py-3 text-center text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-brand-midnight"><span data-i18n="sessions.agape.cta">Explore <span translate="no">Ágape</span> Community Activities</span></a>
-              <p class="mt-3 text-[13px] leading-5 text-ink-invertmuted" data-i18n="sessions.agape.note">Participation is free and subject to programme availability and suitability.</p>
-            </article>
-            <!-- Mentoria, não supervisão reconhecida pela ACA: a supervisão só abre depois do registro da Claudia como supervisora. -->
-            <article class="rounded-[32px] border border-navy-line bg-navy-raised p-7 sm:p-9">
-              <h3 class="font-display text-[22px] font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.mentoring">Professional Mentoring for New Counsellors</h3>
-              <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
-              <p class="mt-4 text-ink-invertmuted" data-i18n="sessions.mentoring.text1">For newly qualified counsellors beginning their professional journey, individual mentoring offers a space to explore the transition from training into practice, professional identity, ethical considerations and the practical challenges of establishing a counselling career.</p>
-              <p class="mt-3 text-ink-invertmuted" data-i18n="sessions.mentoring.text2">Individual appointments and a structured three-session mentoring package are available.</p>
-            </article>
+            <div id="panel-development" class="tab-panel grid gap-6 pt-8 md:grid-cols-2" role="tabpanel" aria-labelledby="tab-development" tabindex="0">
+              <article class="flex flex-col rounded-[32px] bg-surface-sunken p-7 text-ink sm:p-9">
+                <h3 class="font-display text-[22px] text-brand-midnight font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.agape"><span translate="no">Ágape</span> Project: Community Support Groups</h3>
+                <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
+                <p class="mt-4 text-ink-muted" data-i18n="sessions.agape.text1">Through <span translate="no">Ágape Women's Support</span>, Atma Qatarse Institute offers free community initiatives that bring women together in a supportive environment for reflection, connection and shared understanding.</p>
+                <p class="mt-3 text-ink-muted" data-i18n="sessions.agape.text2">Our activities include online support groups addressing women's emotional wellbeing, relationships and experiences of domestic and family violence, with an emphasis on dignity, safety and the importance of supportive relationships.</p>
+                <p class="mb-6 mt-3 text-ink-muted" data-i18n="sessions.agape.text3">Healthcare professionals and community organisations are welcome to enquire about these initiatives and explore appropriate opportunities for referral.</p>
+                <!-- Inscrição própria pela Humanitix. Sem link em EXTERNAL_LINKS (js/main.js), leva às datas na página. -->
+                <a href="#group" data-link="agape" class="mt-auto inline-flex items-center justify-center self-start rounded-full border border-line-strong px-5 py-3 text-center text-[15px] font-semibold leading-5 tracking-[0.02em] text-action-ink hover:bg-action-subtle"><span data-i18n="sessions.agape.cta">Explore <span translate="no">Ágape</span> Community Activities</span></a>
+                <p class="mt-3 text-[13px] leading-5 text-ink-muted" data-i18n="sessions.agape.note">Participation is free and subject to programme availability and suitability.</p>
+              </article>
+              <!-- Mentoria, não supervisão reconhecida pela ACA: a supervisão só abre depois do registro da Claudia como supervisora. -->
+              <article class="rounded-[32px] bg-surface-sunken p-7 text-ink sm:p-9">
+                <h3 class="font-display text-[22px] text-brand-midnight font-medium uppercase leading-8 tracking-[0.04em]" data-i18n="sessions.mentoring">Professional Mentoring for New Counsellors</h3>
+                <span class="mt-4 block h-px w-10 bg-accent" aria-hidden="true"></span>
+                <p class="mt-4 text-ink-muted" data-i18n="sessions.mentoring.text1">For newly qualified counsellors beginning their professional journey, individual mentoring offers a space to explore the transition from training into practice, professional identity, ethical considerations and the practical challenges of establishing a counselling career.</p>
+                <p class="mt-3 text-ink-muted" data-i18n="sessions.mentoring.text2">Individual appointments and a structured three-session mentoring package are available.</p>
+              </article>
+            </div>
           </div>
         </div>
 
         <!-- Local e área de atendimento: logo depois dos serviços e antes do agendamento. -->
-        <div class="reveal mt-14 rounded-[32px] bg-surface p-7 text-ink sm:p-9">
+        <div class="reveal mt-14 rounded-[32px] bg-surface-sunken p-7 text-ink sm:p-9">
           <h3 class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em] text-brand-midnight" data-i18n="location.title">Location &amp; Availability</h3>
           <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-muted" data-i18n="location.text1">Based in Henty, New South Wales, Atma Qatarse Institute offers online counselling across Australia, alongside mobile counselling services in selected regional communities between Wagga Wagga and Wodonga.</p>
           <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-muted" data-i18n="location.text2">Home visits are available by arrangement and subject to location, suitability and appointment availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
@@ -391,13 +397,13 @@
 
         <!-- PENDENTE: links da Humanitix. Preencher EXTERNAL_LINKS em js/main.js. -->
         <div class="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
-          <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
+          <article class="reveal flex flex-col rounded-[32px] bg-surface-sunken p-7 text-ink">
             <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.november.date">21 November 2026</p>
             <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.november.title">Women and Sexuality</h3>
             <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.november.text">A meeting to explore women's relationship with their sexuality, questioning taboos and caring for emotional wellbeing.</p>
             <a href="#contact" data-link="group-november" data-closed="group.closed" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
           </article>
-          <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
+          <article class="reveal flex flex-col rounded-[32px] bg-surface-sunken p-7 text-ink">
             <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.december.date">13 December 2026</p>
             <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.december.title">Trauma, Grief and Loss</h3>
             <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.december.text">A space to reflect on loss, grief and traumatic experiences, held with care and safety.</p>
@@ -546,35 +552,35 @@
       </div>
 
       <div class="reveal mt-10 space-y-3">
-        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+        <details class="rounded-[24px] bg-surface-sunken px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
             <span data-i18n="faq.book.q">How do I book a session?</span>
             <span class="toggle" aria-hidden="true"></span>
           </summary>
           <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.book.a">Open the online calendar with the "Book a session" button and choose a time that suits you.</p>
         </details>
-        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+        <details class="rounded-[24px] bg-surface-sunken px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
             <span data-i18n="faq.pay.q">Do I have to pay to join the therapeutic group?</span>
             <span class="toggle" aria-hidden="true"></span>
           </summary>
           <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.pay.a">No. You can register for $0. If you would like to support the project, there is an optional voluntary contribution. It does not change your access to the group.</p>
         </details>
-        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+        <details class="rounded-[24px] bg-surface-sunken px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
             <span data-i18n="faq.meet.q">How do the groups meet?</span>
             <span class="toggle" aria-hidden="true"></span>
           </summary>
           <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.meet.a">Online, via Microsoft Teams. Each meeting lasts 2 hours, in a small group facilitated by Claudia. Registration is done through Humanitix.</p>
         </details>
-        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+        <details class="rounded-[24px] bg-surface-sunken px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
             <span data-i18n="faq.languages.q">In which languages can I have sessions?</span>
             <span class="toggle" aria-hidden="true"></span>
           </summary>
           <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.languages.a">In English, Portuguese or Spanish. Sessions are held online across Australia, with mobile counselling available in selected regional communities.</p>
         </details>
-        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+        <details class="rounded-[24px] bg-surface-sunken px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
             <span data-i18n="faq.confidential.q">Is counselling confidential?</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -582,14 +588,14 @@
           <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.confidential.a">Counselling is conducted with respect for your privacy and confidentiality. Information is handled in accordance with applicable privacy obligations and professional ethical standards. There are circumstances in which disclosure may be required or permitted by law or necessary to address serious safety concerns. These limits are explained before counselling begins.</p>
         </details>
         <!-- Texto provisório: não confirma que o instituto já aceita NDIS, EAP ou planos de saúde. -->
-        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+        <details class="rounded-[24px] bg-surface-sunken px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
             <span data-i18n="faq.funding.q">Can I use private health insurance, NDIS or an Employee Assistance Program (EAP) to access counselling?</span>
             <span class="toggle" aria-hidden="true"></span>
           </summary>
           <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.funding.a">Funding and payment arrangements depend on individual eligibility and the agreements available through the practice. Please contact us before booking if you wish to enquire about a particular funding arrangement.</p>
         </details>
-        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+        <details class="rounded-[24px] bg-surface-sunken px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
             <span data-i18n="faq.start.q">When do training and supervision start?</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -630,7 +636,7 @@
         <!-- Sem backend: a mensagem é montada aqui e abre pronta no aplicativo de e-mail de quem preenche.
              Nada sai sem a pessoa apertar enviar lá. O texto do formulário diz isso.
              Sem WhatsApp: a Claudia não quer o WhatsApp profissional como canal público (Arquivo 002, seção 3). -->
-        <form id="contact-form" novalidate class="reveal rounded-[32px] bg-surface p-7 text-ink sm:p-9">
+        <form id="contact-form" novalidate class="reveal rounded-[32px] bg-surface-sunken p-7 text-ink sm:p-9">
           <h3 class="text-[20px] font-semibold leading-7" data-i18n="form.title">Write to us</h3>
           <p class="mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="form.intro">Fill in your name and what you are looking for. The message opens ready in your email app, and it only goes out when you press send there.</p>
           <div class="mt-6 space-y-5">

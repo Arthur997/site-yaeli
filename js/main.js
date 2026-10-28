@@ -215,17 +215,77 @@
     });
   }
 
-  /* Abas acessíveis: clique ou toque troca o painel; setas, Home e End navegam entre as abas. */
+  /* A altura do contêiner vai da antiga à nova em vez de saltar; no fim volta a ser automática. */
+  function animateHeight(wrapper, change) {
+    var startHeight = wrapper.offsetHeight;
+
+    change();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    /* Sem a altura fixa de uma troca anterior ainda em andamento, mede a altura real do painel novo. */
+    wrapper.style.height = '';
+    var endHeight = wrapper.offsetHeight;
+    if (endHeight === startHeight) {
+      wrapper.style.overflow = '';
+      return;
+    }
+
+    wrapper.style.height = startHeight + 'px';
+    wrapper.style.overflow = 'hidden';
+    void wrapper.offsetHeight; /* força o navegador a aplicar a altura inicial antes da transição */
+    wrapper.style.height = endHeight + 'px';
+
+    /* Só o fim da transição de altura do próprio contêiner encerra; as dos filhos também sobem até aqui. */
+    $(wrapper).off('transitionend.height').on('transitionend.height', function (event) {
+      if (event.target !== wrapper || event.originalEvent.propertyName !== 'height') {
+        return;
+      }
+      $(wrapper).off('transitionend.height');
+      wrapper.style.height = '';
+      wrapper.style.overflow = '';
+    });
+  }
+
+  /* Abas acessíveis: clique ou toque troca o painel; setas, Home e End navegam entre as abas.
+     O painel novo entra pelo lado da aba escolhida (direita se ela vem depois, esquerda se antes). */
   function bindTabs() {
     $('.tabs').each(function () {
       var $tabs = $(this).find('[role="tab"]');
+      var wrapper = $(this).find('.tab-panels').get(0);
+      var indicator = $(this).find('.tab-indicator').get(0);
+      var current = 0;
 
-      function select(index) {
+      /* O marcador copia posição e tamanho da aba ativa; a transição do CSS faz o deslize. */
+      function moveIndicator() {
+        var tab = $tabs.get(current);
+        indicator.style.width = tab.offsetWidth + 'px';
+        indicator.style.height = tab.offsetHeight + 'px';
+        indicator.style.transform = 'translate(' + tab.offsetLeft + 'px, ' + tab.offsetTop + 'px)';
+      }
+
+      function showOnly(index, enterFrom) {
         $tabs.each(function (tabIndex) {
           var isSelected = tabIndex === index;
+          var $panel = $('#' + $(this).attr('aria-controls'));
+
           $(this).attr({ 'aria-selected': String(isSelected), tabindex: isSelected ? '0' : '-1' });
-          $('#' + $(this).attr('aria-controls')).prop('hidden', !isSelected);
+          $panel.prop('hidden', !isSelected).removeAttr('data-enter');
+          if (isSelected && enterFrom) {
+            $panel.attr('data-enter', enterFrom);
+          }
         });
+      }
+
+      function select(index) {
+        if (index === current) {
+          return;
+        }
+        var enterFrom = index > current ? 'right' : 'left';
+        current = index;
+        moveIndicator();
+        animateHeight(wrapper, function () { showOnly(index, enterFrom); });
       }
 
       $tabs.on('click', function () {
@@ -234,11 +294,11 @@
 
       $tabs.on('keydown', function (event) {
         var keyTargets = { ArrowRight: 1, ArrowLeft: -1 };
-        var current = $tabs.index(this);
+        var focusedIndex = $tabs.index(this);
         var next = null;
 
         if (keyTargets[event.key]) {
-          next = (current + keyTargets[event.key] + $tabs.length) % $tabs.length;
+          next = (focusedIndex + keyTargets[event.key] + $tabs.length) % $tabs.length;
         } else if (event.key === 'Home') {
           next = 0;
         } else if (event.key === 'End') {
@@ -252,7 +312,21 @@
         }
       });
 
-      select(0);
+      showOnly(0);
+
+      /* Primeira posição sem animação, para o marcador não deslizar a partir do canto. */
+      indicator.style.transition = 'none';
+      moveIndicator();
+      void indicator.offsetWidth;
+      indicator.style.transition = '';
+
+      /* Troca de idioma ou de largura muda o tamanho das abas: o marcador acompanha. */
+      if ('ResizeObserver' in window) {
+        var observer = new ResizeObserver(moveIndicator);
+        $tabs.each(function () { observer.observe(this); });
+      } else {
+        $(window).on('resize', moveIndicator);
+      }
     });
   }
 
