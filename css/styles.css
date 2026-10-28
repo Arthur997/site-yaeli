@@ -14,7 +14,9 @@ div[id] {
   scroll-margin-top: 88px;
 }
 
+/* Peso 450 (fonte variável): o 400 da Source Sans 3 fica fino, sobretudo em texto claro sobre o marinho. */
 body {
+  font-weight: 450;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -177,7 +179,7 @@ summary::-webkit-details-marker {
   flex: none;
   width: 14px;
   height: 14px;
-  color: #4a5b68;
+  color: #34444f;
 }
 .toggle::before,
 .toggle::after {
@@ -202,7 +204,7 @@ details[open] .toggle::after {
 
 /* Troca de idioma: o ativo fica preenchido em marinho, o outro só no texto. */
 .lang-option {
-  color: #4a5b68;
+  color: #34444f;
 }
 .lang-option:hover {
   color: #042a45;
@@ -264,7 +266,7 @@ details[open] .toggle::after {
   min-height: 52px;
   padding: 8px 20px;
   border-radius: 14px;
-  color: #4a5b68;
+  color: #34444f;
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;

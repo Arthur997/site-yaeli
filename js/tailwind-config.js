@@ -7,7 +7,7 @@ tailwind.config = {
         brand: { midnight: '#042A45', slate: '#5D7F98', red: '#981F2D', gold: '#AD8B43', ivory: '#F6F2E8', charcoal: '#0F1D28' },
         surface: { DEFAULT: '#F6F2E8', raised: '#FBF9F3', sunken: '#ECE6D8' },
         line: { DEFAULT: '#DDD5C3', strong: '#5D7F98' },
-        ink: { DEFAULT: '#0F1D28', muted: '#4A5B68', subtle: '#5B6B77', invert: '#F6F2E8', invertmuted: '#B4C3CF' },
+        ink: { DEFAULT: '#0F1D28', muted: '#34444F', subtle: '#5B6B77', invert: '#F6F2E8', invertmuted: '#D2DCE4' },
         action: { DEFAULT: '#042A45', hover: '#0A3A5C', ink: '#042A45', subtle: '#E3E8EA' },
         accent: { DEFAULT: '#AD8B43', ink: '#8A6A24' },
         /* Sobre azul-marinho valem os tokens do tema escuro. */
