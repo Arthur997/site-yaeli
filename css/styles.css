@@ -240,6 +240,33 @@ details[open] .toggle::after {
   display: block;
 }
 
+/* Abas de Sessions sobre o marinho: a ativa fica preenchida em dourado, as outras só com contorno. */
+.tab {
+  border: 1px solid #b4c3cf;
+  border-radius: 9999px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #f6f2e8;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+.tab:hover {
+  background: #0b3554;
+}
+.tab[aria-selected='true'] {
+  border-color: #ad8b43;
+  background: #ad8b43;
+  color: #0f1d28;
+}
+.tab-panel[hidden] {
+  display: none;
+}
+.tab-panel:not([hidden]) {
+  animation: fade-in 300ms ease;
+}
+
 /* Inscrição ainda sem link: o botão avisa e não leva a lugar nenhum. */
 .registration-closed {
   border-radius: 9999px;
@@ -262,7 +289,8 @@ details[open] .toggle::after {
     opacity: 1;
     transform: none;
   }
-  .carousel-slide.is-active {
+  .carousel-slide.is-active,
+  .tab-panel:not([hidden]) {
     animation: none;
   }
 }

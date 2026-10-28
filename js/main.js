@@ -215,6 +215,47 @@
     });
   }
 
+  /* Abas acessíveis: clique ou toque troca o painel; setas, Home e End navegam entre as abas. */
+  function bindTabs() {
+    $('.tabs').each(function () {
+      var $tabs = $(this).find('[role="tab"]');
+
+      function select(index) {
+        $tabs.each(function (tabIndex) {
+          var isSelected = tabIndex === index;
+          $(this).attr({ 'aria-selected': String(isSelected), tabindex: isSelected ? '0' : '-1' });
+          $('#' + $(this).attr('aria-controls')).prop('hidden', !isSelected);
+        });
+      }
+
+      $tabs.on('click', function () {
+        select($tabs.index(this));
+      });
+
+      $tabs.on('keydown', function (event) {
+        var keyTargets = { ArrowRight: 1, ArrowLeft: -1 };
+        var current = $tabs.index(this);
+        var next = null;
+
+        if (keyTargets[event.key]) {
+          next = (current + keyTargets[event.key] + $tabs.length) % $tabs.length;
+        } else if (event.key === 'Home') {
+          next = 0;
+        } else if (event.key === 'End') {
+          next = $tabs.length - 1;
+        }
+
+        if (next !== null) {
+          event.preventDefault();
+          select(next);
+          $tabs.eq(next).trigger('focus');
+        }
+      });
+
+      select(0);
+    });
+  }
+
   /* Seção entra na tela uma vez e fica visível. Sem IntersectionObserver, tudo aparece já. */
   function bindReveal() {
     var $items = $('.reveal');
@@ -324,6 +365,7 @@
     bindExternalLinks();
     bindInterestShortcuts();
     bindCarousel();
+    bindTabs();
     /* Depois dos links externos e do carrossel: os dois mudam textos que a troca de idioma precisa ver. */
     bindLanguageSwitch();
     bindReveal();
