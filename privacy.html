@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-title-key="policy.privacy.meta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | Atma Qatarse Institute</title>
+<!-- Sem indexação enquanto o texto definitivo não chega. Tirar o noindex ao publicar a política. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#042A45">
+<link rel="icon" type="image/png" href="imgs/favicon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- Página de política. Mesmo cabeçalho enxuto nas três (privacy, terms, cancellation):
+     muda só data-title-key, o título e as chaves policy.*. -->
+<body class="bg-surface font-sans text-[17px] leading-7 text-ink">
+
+<header class="border-b border-line bg-surface">
+  <div class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="imgs/logo-mark.png" alt="Atma Qatarse Institute" width="320" height="194" class="h-10 w-auto">
+      <span translate="no" class="whitespace-nowrap font-display text-[15px] font-medium uppercase leading-5 tracking-[0.08em] text-brand-midnight max-[399px]:hidden">Atma Qatarse<span class="block text-[10px] font-sans font-semibold leading-3 tracking-[0.3em] text-accent-ink">Institute</span></span>
+    </a>
+    <div class="flex rounded-full border border-line-strong p-0.5 text-[13px] font-semibold leading-4" role="group" aria-label="Language" data-i18n-aria="lang.label">
+      <button type="button" data-lang="en" aria-pressed="true" class="lang-option rounded-full px-2.5 py-1.5" lang="en">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false" class="lang-option rounded-full px-2.5 py-1.5" lang="pt-BR">PT</button>
+    </div>
+  </div>
+</header>
+
+<main class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+  <h1 class="font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="policy.privacy.title">Privacy Policy</h1>
+  <span class="mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+  <!-- PENDENTE: texto da política, fornecido ou aprovado pela Claudia antes da publicação. -->
+  <p class="mt-8 text-ink-muted"><span data-i18n="policy.pending">The text of this policy is being finalised and will be published here soon. If you have any questions, please write to</span> <a href="mailto:agape@agapewomenssupport.com.au" class="font-semibold text-action-ink hover:underline">agape@agapewomenssupport.com.au</a>.</p>
+  <a href="index.html" class="mt-10 inline-flex items-center justify-center rounded-full bg-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="policy.back">Back to the website</a>
+</main>
+
+<footer class="on-navy bg-brand-charcoal">
+  <div class="mx-auto max-w-3xl px-4 py-8 text-[13px] leading-6 text-ink-invertmuted sm:px-6">
+    <p data-i18n="footer.rights">© 2026 Atma Qatarse Institute. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

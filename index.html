@@ -6,7 +6,7 @@
 <!-- SEO: título e descrição puxam as buscas principais (online counselling, trauma-informed,
      psicanálise, atendimento em português e espanhol na Austrália). A versão pt vem de js/i18n.js. -->
 <title>Online Counselling in Australia, Trauma-Informed | Atma Qatarse Institute</title>
-<meta name="description" content="Trauma-informed online counselling for individuals and couples with Claudia Cady, ACA-registered counsellor and psychoanalyst. Sessions in English, Portuguese and Spanish.">
+<meta name="description" content="Counselling with Claudia Cady, ACA-registered counsellor and psychoanalyst. Online across Australia and mobile visits from Henty, NSW. In English, Portuguese and Spanish.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Claudia Cady">
 <meta name="theme-color" content="#042A45">
@@ -42,23 +42,24 @@
       "@type": "ProfessionalService",
       "@id": "#institute",
       "name": "Atma Qatarse Institute",
-      "description": "Trauma-informed online counselling for individuals and couples, a women's therapeutic group, and training and supervision for practitioners.",
+      "description": "Online counselling for individuals and couples, mobile counselling across selected regional communities, therapeutic groups, and professional mentoring for new counsellors.",
       "image": "imgs/web/sunset-stones.jpg",
       "logo": "imgs/logo-mark.png",
       "email": "agape@agapewomenssupport.com.au",
       "founder": { "@id": "#claudia" },
-      "areaServed": [{ "@type": "Country", "name": "Australia" }, "Worldwide (online)"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Henty", "addressRegion": "NSW", "addressCountry": "AU" },
+      "areaServed": [{ "@type": "Country", "name": "Australia" }, { "@type": "Place", "name": "Regional communities between Wagga Wagga and Wodonga, NSW" }],
       "availableLanguage": ["English", "Portuguese", "Spanish"],
-      "knowsAbout": ["Counselling", "Psychoanalysis", "Psychodynamic therapy", "Trauma-informed care", "Grief and loss", "Couples counselling", "Clinical supervision"],
+      "knowsAbout": ["Counselling", "Psychoanalysis", "Psychodynamic therapy", "Trauma-informed care", "Grief and loss", "Couples counselling", "Professional mentoring"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individual online counselling", "description": "One-to-one counselling in English, Portuguese or Spanish, tailored to your process and pace." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Couples counselling online", "description": "Counselling for couples who want to work on their relationship together." } },
-          { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "itemOffered": { "@type": "Service", "name": "Women's therapeutic group", "description": "Small online groups facilitated by Claudia Cady, with free registration and an optional voluntary contribution." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Group supervision for practitioners", "description": "Group supervision for counsellors and therapists, with Claudia Cady." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Training for practitioners", "description": "Training program in the Atma Qatarse Method for counsellors and therapists." } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individual counselling online", "description": "A space to explore emotional difficulties, trauma, grief, relationships and life transitions through attentive, individualised therapeutic support." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Couples counselling online", "description": "An opportunity for couples to explore relationship patterns, communication, emotional difficulties and the ways they relate to one another." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile counselling: home and community visits", "description": "Counselling through home and community visits across the regional area between Wagga Wagga and Wodonga, subject to location and availability." } },
+          { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "itemOffered": { "@type": "Service", "name": "Ágape Project: community support groups", "description": "Free online support groups for women, addressing emotional wellbeing, relationships and experiences of domestic and family violence." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional mentoring for new counsellors", "description": "Individual mentoring and a structured three-session programme for newly qualified counsellors." } }
         ]
       }
     },
@@ -85,23 +86,8 @@
     },
     {
       "@type": "Event",
-      "name": "Women's Therapeutic Group: Trauma, Grief and Loss",
-      "description": "A space to reflect on loss, grief and traumatic experiences, held with care and safety. Online, small group, 2 hours.",
-      "startDate": "2026-10-31",
-      "duration": "PT2H",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-      "location": { "@type": "VirtualLocation", "name": "Microsoft Teams", "url": "https://www.microsoft.com/microsoft-teams" },
-      "isAccessibleForFree": true,
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" },
-      "organizer": { "@id": "#agape" },
-      "performer": { "@id": "#claudia" },
-      "image": "imgs/web/women-sunset.jpg"
-    },
-    {
-      "@type": "Event",
-      "name": "Women's Therapeutic Group: Women, Family and the Invisible Load",
-      "description": "A group reflection on emotional overload, family expectations, gender roles and healthy boundaries. Online, small group, 2 hours.",
+      "name": "Women's Therapeutic Group: Women and Sexuality",
+      "description": "A meeting to explore women's relationship with their sexuality, questioning taboos and caring for emotional wellbeing. Online, small group, 2 hours.",
       "startDate": "2026-11-21",
       "duration": "PT2H",
       "eventStatus": "https://schema.org/EventScheduled",
@@ -111,12 +97,12 @@
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" },
       "organizer": { "@id": "#agape" },
       "performer": { "@id": "#claudia" },
-      "image": "imgs/web/women-sunset.jpg"
+      "image": "imgs/web/women-pink-hands.jpg"
     },
     {
       "@type": "Event",
-      "name": "Women's Therapeutic Group: Women and Sexuality",
-      "description": "A meeting to explore women's relationship with their sexuality, questioning taboos and caring for emotional wellbeing. Online, small group, 2 hours.",
+      "name": "Women's Therapeutic Group: Trauma, Grief and Loss",
+      "description": "A space to reflect on loss, grief and traumatic experiences, held with care and safety. Online, small group, 2 hours.",
       "startDate": "2026-12-13",
       "duration": "PT2H",
       "eventStatus": "https://schema.org/EventScheduled",
@@ -126,7 +112,7 @@
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" },
       "organizer": { "@id": "#agape" },
       "performer": { "@id": "#claudia" },
-      "image": "imgs/web/women-sunset.jpg"
+      "image": "imgs/web/women-pink-hands.jpg"
     },
     {
       "@type": "FAQPage",
@@ -134,7 +120,9 @@
         { "@type": "Question", "name": "How do I book a session?", "acceptedAnswer": { "@type": "Answer", "text": "Open the online calendar with the \"Book a session\" button and choose a time that suits you." } },
         { "@type": "Question", "name": "Do I have to pay to join the therapeutic group?", "acceptedAnswer": { "@type": "Answer", "text": "No. You can register for $0. If you would like to support the project, there is an optional voluntary contribution. It does not change your access to the group." } },
         { "@type": "Question", "name": "How do the groups meet?", "acceptedAnswer": { "@type": "Answer", "text": "Online, via Microsoft Teams. Each meeting lasts 2 hours, in a small group facilitated by Claudia. Registration is done through Humanitix." } },
-        { "@type": "Question", "name": "In which languages can I have sessions?", "acceptedAnswer": { "@type": "Answer", "text": "In English, Portuguese or Spanish. Sessions are held online." } },
+        { "@type": "Question", "name": "In which languages can I have sessions?", "acceptedAnswer": { "@type": "Answer", "text": "In English, Portuguese or Spanish. Sessions are held online across Australia, with mobile counselling available in selected regional communities." } },
+        { "@type": "Question", "name": "Is counselling confidential?", "acceptedAnswer": { "@type": "Answer", "text": "Counselling is conducted with respect for your privacy and confidentiality. Information is handled in accordance with applicable privacy obligations and professional ethical standards. There are circumstances in which disclosure may be required or permitted by law or necessary to address serious safety concerns. These limits are explained before counselling begins." } },
+        { "@type": "Question", "name": "Can I use private health insurance, NDIS or an Employee Assistance Program (EAP) to access counselling?", "acceptedAnswer": { "@type": "Answer", "text": "Funding and payment arrangements depend on individual eligibility and the agreements available through the practice. Please contact us before booking if you wish to enquire about a particular funding arrangement." } },
         { "@type": "Question", "name": "When do training and supervision start?", "acceptedAnswer": { "@type": "Answer", "text": "Training starts as a pilot and its dates are still to be announced. Supervision is planned from May 2027. Leave your details below and you will be told when each one opens." } }
       ]
     }
@@ -171,8 +159,8 @@
     <nav class="hidden items-center gap-1 text-[15px] font-semibold lg:flex" aria-label="Sections" data-i18n-aria="nav.label">
       <a href="#approach" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.approach">Approach</a>
       <a href="#sessions" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.sessions">Sessions</a>
-      <a href="#group" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.group">Women's Group</a>
-      <a href="#practitioners" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.practitioners">Practitioners</a>
+      <a href="#group" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.group"><span translate="no">Ágape</span> Project</a>
+      <a href="#practitioners" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.practitioners">For Practitioners</a>
       <a href="#questions" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.questions">Questions</a>
     </nav>
     <div class="flex flex-none items-center gap-2 sm:gap-3">
@@ -195,12 +183,12 @@
       <div class="reveal">
         <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="hero.overline">Therapeutic sessions · Training · Supervision</p>
         <h1 class="mt-5 font-display text-display-m font-medium uppercase sm:text-display-l lg:text-display-xl" data-i18n="hero.title">A deeper, more integrated life.</h1>
-        <p class="mt-6 max-w-xl text-[19px] leading-[30px] text-ink-invertmuted" data-i18n="hero.lead">Atma Qatarse Institute is a counselling practice led by Claudia Cady. It offers online therapeutic sessions for individuals, couples and groups, and is opening training and supervision for practitioners.</p>
+        <p class="mt-6 max-w-xl text-[19px] leading-[30px] text-ink-invertmuted" data-i18n="hero.lead">Atma Qatarse Institute brings together therapeutic practice, professional education and supervision. It offers online counselling for individuals and couples, mobile counselling across selected regional communities, therapeutic groups, and developing opportunities for professional training and mentoring.</p>
         <div class="mt-9 flex flex-wrap gap-3">
           <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="hero.cta">Take the first step, book a session</a>
           <a href="#group" class="inline-flex items-center justify-center rounded-full border border-ink-invertmuted px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-navy-raised" data-i18n="hero.groups">See the group dates</a>
         </div>
-        <p class="mt-7 text-[15px] leading-6 text-ink-invertmuted" data-i18n="hero.note">Trauma-informed care. Online sessions in English, Portuguese and Spanish.</p>
+        <p class="mt-7 text-[15px] leading-6 text-ink-invertmuted" data-i18n="hero.note">Trauma-informed care. Sessions in English, Portuguese and Spanish.</p>
       </div>
 
       <!-- Fotos do Website Review (out/2026), recorte circular com filete dourado. -->
@@ -279,27 +267,63 @@
 
     <div class="relative mx-auto max-w-6xl space-y-24 px-4 pb-32 pt-28 sm:px-6 lg:pb-36 lg:pt-36">
 
-      <!-- Sessões terapêuticas: individual, casal e grupo -->
-      <div id="sessions" class="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
-        <img src="imgs/web/armchair-light.jpg" alt="A soft armchair and a plant in warm afternoon light" data-i18n-alt="sessions.alt" width="940" height="900" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
-        <div class="reveal">
-          <h2 class="font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="sessions.title">Therapeutic sessions</h2>
-          <p class="mt-3 font-serif text-[20px] italic leading-8 text-ink-invertmuted" data-i18n="sessions.subtitle">Online, in three formats.</p>
-          <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="sessions.text">Individual and couple sessions are booked in the calendar. The therapeutic group is the institute's community work and has its own dates.</p>
+      <!-- Serviços em três categorias, na ordem do Website Review 2: online, presencial,
+           grupo e desenvolvimento profissional. Valores e pacotes ficam no Cal.com, não aqui. -->
+      <div id="sessions">
+        <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
+          <img src="imgs/web/armchair-light.jpg" alt="A soft armchair and a plant in warm afternoon light" data-i18n-alt="sessions.alt" width="940" height="900" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
+          <div class="reveal">
+            <h2 class="font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="sessions.title">Sessions</h2>
+            <p class="mt-3 font-serif text-[20px] italic leading-8 text-ink-invertmuted" data-i18n="sessions.subtitle">Online, face to face and in groups.</p>
+            <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="sessions.text">Counselling and mentoring are booked through the calendar, where you will find each service, its duration, fees and available times. The <span translate="no">Ágape</span> community groups have their own dates and registration.</p>
+          </div>
+        </div>
 
-          <!-- PENDENTE: confirmar a ferramenta de agendamento (Cal.com atual ou Halaxy). Trocar é mudar o link. -->
-          <ul class="mt-8 max-w-2xl divide-y divide-navy-line border-y border-navy-line">
-            <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4">
-              <span><strong class="font-display text-[20px] font-medium uppercase tracking-[0.04em]" data-i18n="sessions.individual">Individual</strong><span class="mt-1 block text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.individual.text">One-to-one counselling, tailored to your process and pace. In English, Portuguese or Spanish.</span></span>
-            </li>
-            <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4">
-              <span><strong class="font-display text-[20px] font-medium uppercase tracking-[0.04em]" data-i18n="sessions.couple">Couple</strong><span class="mt-1 block text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.couple.text">Counselling for couples who want to work on their relationship together.</span></span>
-            </li>
-            <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4">
-              <span><strong class="font-display text-[20px] font-medium uppercase tracking-[0.04em]" data-i18n="sessions.group">Therapeutic group</strong><span class="mt-1 block text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.group.text">Small online groups facilitated by Claudia, with registration at $0.</span></span>
-            </li>
-          </ul>
-          <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="sessions.cta">Choose a time</a>
+        <div class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          <div class="reveal border-t border-navy-line pt-6">
+            <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="sessions.online">Online Counselling</p>
+            <h3 class="mt-4 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.individual">Individual Counselling</h3>
+            <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.individual.text">A space to explore emotional difficulties, trauma, grief, relationships and life transitions through attentive, individualised therapeutic support.</p>
+            <h3 class="mt-6 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.couple">Couples Counselling</h3>
+            <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.couple.text">An opportunity for couples to explore relationship patterns, communication, emotional difficulties and the ways they relate to one another, in a supportive and reflective space.</p>
+          </div>
+
+          <div class="reveal border-t border-navy-line pt-6">
+            <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="sessions.facetoface">Face-to-Face Services</p>
+            <h3 class="mt-4 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.mobile">Mobile Counselling: Home &amp; Community Visits</h3>
+            <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mobile.text1">Counselling is also available through home and community visits for people who experience difficulties accessing traditional services, including older adults, rural residents and individuals with mobility or transport limitations.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mobile.text2">Mobile appointments may be arranged across the regional area between Wagga Wagga and Wodonga, subject to location and availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
+          </div>
+
+          <div class="reveal border-t border-navy-line pt-6">
+            <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="sessions.development">Group &amp; Professional Development</p>
+            <h3 class="mt-4 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.agape"><span translate="no">Ágape</span> Project: Community Support Groups</h3>
+            <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text1">Through <span translate="no">Ágape Women's Support</span>, Atma Qatarse Institute offers free community initiatives that bring women together in a supportive environment for reflection, connection and shared understanding.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text2">Our activities include online support groups addressing women's emotional wellbeing, relationships and experiences of domestic and family violence, with an emphasis on dignity, safety and the importance of supportive relationships.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.agape.text3">Healthcare professionals and community organisations are welcome to enquire about these initiatives and explore appropriate opportunities for referral.</p>
+            <!-- Inscrição própria pela Humanitix. Sem link em EXTERNAL_LINKS (js/main.js), leva às datas na página. -->
+            <a href="#group" data-link="agape" class="mt-5 inline-flex items-center justify-center rounded-full border border-ink-invertmuted px-5 py-3 text-center text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-navy-raised"><span data-i18n="sessions.agape.cta">Explore <span translate="no">Ágape</span> Community Activities</span></a>
+            <p class="mt-3 text-[13px] leading-5 text-ink-invertmuted" data-i18n="sessions.agape.note">Participation is free and subject to programme availability and suitability.</p>
+
+            <!-- Mentoria, não supervisão reconhecida pela ACA: a supervisão só abre depois do registro da Claudia como supervisora. -->
+            <h3 class="mt-8 font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="sessions.mentoring">Professional Mentoring for New Counsellors</h3>
+            <p class="mt-2 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mentoring.text1">For newly qualified counsellors beginning their professional journey, individual mentoring offers a space to explore the transition from training into practice, professional identity, ethical considerations and the practical challenges of establishing a counselling career.</p>
+            <p class="mt-3 text-[15px] leading-6 text-ink-invertmuted" data-i18n="sessions.mentoring.text2">Individual appointments and a structured three-session mentoring package are available.</p>
+          </div>
+        </div>
+
+        <!-- Local e área de atendimento: logo depois dos serviços e antes do agendamento. -->
+        <div class="reveal mt-14 rounded-[32px] border border-navy-line bg-navy-raised p-7 sm:p-9">
+          <h3 class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.04em]" data-i18n="location.title">Location &amp; Availability</h3>
+          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="location.text1">Based in Henty, New South Wales, Atma Qatarse Institute offers online counselling across Australia, alongside mobile counselling services in selected regional communities between Wagga Wagga and Wodonga.</p>
+          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="location.text2">Home visits are available by arrangement and subject to location, suitability and appointment availability. An additional $25 travel fee applies to confirmed mobile appointments.</p>
+          <p class="mt-3 max-w-3xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="location.text3">Sessions are available in English, Portuguese and Spanish.</p>
+        </div>
+
+        <!-- Agendamento: tudo pelo Cal.com, menos os grupos da Ágape, que têm botão próprio acima. -->
+        <div class="reveal mt-10 flex flex-wrap items-center gap-3">
+          <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="sessions.cta">Explore Sessions &amp; Book</a>
+          <a href="#referrers" class="inline-flex items-center justify-center rounded-full border border-ink-invertmuted px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-navy-raised" data-i18n="sessions.referrers">For Referrers</a>
         </div>
       </div>
 
@@ -313,7 +337,7 @@
             <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="group.text"><span translate="no">Ágape Women's Support</span> (AWS) is a women-centred community project created to offer accessible, respectful and welcoming spaces for reflection, listening and connection.</p>
             <p class="mt-4 max-w-2xl text-ink-invertmuted" data-i18n="group.text2">We believe that opportunities for emotional care, self-understanding and connection should not depend solely on financial circumstances. AWS therefore seeks to create a space where experiences can be shared, heard and reflected upon, fostering understanding, connection and meaning-making.</p>
           </div>
-          <img src="imgs/web/women-sunset.jpg" alt="Three women embracing as they watch the sunset" data-i18n-alt="group.alt" width="934" height="900" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
+          <img src="imgs/web/women-pink-hands.jpg" alt="Women in pink t-shirts joining hands in a circle" data-i18n-alt="group.alt" width="1143" height="667" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
         </div>
 
         <div class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
@@ -335,31 +359,26 @@
           </div>
         </div>
 
-        <!-- Agenda pública: só os três grupos-piloto de 2026 (Arquivo 002, seção 2). -->
+        <!-- Agenda pública (Website Review 2): o encontro de outubro saiu, o tema de outubro
+             passou para dezembro e o de dezembro para novembro. -->
         <div class="reveal mt-20 text-center">
           <h3 class="font-display text-display-m font-medium uppercase" data-i18n="group.dates.title">Women's Therapeutic Group</h3>
           <p class="mx-auto mt-4 max-w-2xl text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.details"><strong class="font-semibold text-ink-invert">Online via Microsoft Teams. 2 hours. Small group.</strong> Register for $0, with an optional voluntary contribution.</p>
         </div>
 
-        <!-- PENDENTE: links da Humanitix. Preencher HUMANITIX_LINKS em js/main.js. -->
-        <div class="mt-10 grid gap-6 lg:grid-cols-3">
-          <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
-            <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.october.date">31 October 2026</p>
-            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.october.title">Trauma, Grief and Loss</h3>
-            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.october.text">A space to reflect on loss, grief and traumatic experiences, held with care and safety.</p>
-            <a href="#contact" data-group="october" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
-          </article>
+        <!-- PENDENTE: links da Humanitix. Preencher EXTERNAL_LINKS em js/main.js. -->
+        <div class="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
           <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
             <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.november.date">21 November 2026</p>
-            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.november.title">Women, Family and the Invisible Load</h3>
-            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.november.text">A group reflection on emotional overload, family expectations, gender roles and healthy boundaries.</p>
-            <a href="#contact" data-group="november" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
+            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.november.title">Women and Sexuality</h3>
+            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.november.text">A meeting to explore women's relationship with their sexuality, questioning taboos and caring for emotional wellbeing.</p>
+            <a href="#contact" data-link="group-november" data-closed="group.closed" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
           </article>
           <article class="reveal flex flex-col rounded-[32px] bg-surface p-7 text-ink">
             <p class="font-display text-[15px] font-semibold uppercase tracking-[0.08em] text-accent-ink" data-i18n="group.december.date">13 December 2026</p>
-            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.december.title">Women and Sexuality</h3>
-            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.december.text">A meeting to explore women's relationship with their sexuality, questioning taboos and caring for emotional wellbeing.</p>
-            <a href="#contact" data-group="december" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
+            <h3 class="mt-2 text-[20px] font-semibold leading-7" data-i18n="group.december.title">Trauma, Grief and Loss</h3>
+            <p class="mb-6 mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="group.december.text">A space to reflect on loss, grief and traumatic experiences, held with care and safety.</p>
+            <a href="#contact" data-link="group-december" data-closed="group.closed" class="mt-auto inline-flex items-center justify-center rounded-full bg-action px-5 py-3 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="group.register">Register for this group</a>
           </article>
         </div>
         <p class="mt-6 text-center text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.humanitix">Registration and the consent form are completed on Humanitix.</p>
@@ -367,32 +386,81 @@
         <p class="mt-1 text-center text-[15px] leading-6 text-ink-invertmuted" data-i18n="group.whatsapp">New dates and reflections are announced in the <a href="https://chat.whatsapp.com/HRnQVfO2xon6sfMzeUYGfp" target="_blank" rel="noopener" class="font-semibold text-ink-invert underline underline-offset-4 hover:no-underline"><span translate="no">Ágape Women's Support</span> WhatsApp group</a>.</p>
       </div>
 
-      <!-- Quem conduz: bloco curto. A página não é centrada na pessoa. -->
+      <!-- Quem conduz: única apresentação da Claudia no site. Texto dela (Website Review 2). -->
       <div id="about" class="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
         <img src="imgs/web/claudia-cady.jpg" alt="Claudia Cady" width="900" height="900" loading="lazy" class="reveal mx-auto aspect-square w-full max-w-[420px] rounded-full border-2 border-brand-gold object-cover">
         <div class="reveal">
           <h2 class="font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="about.title">Who leads the work</h2>
           <p class="mt-3 font-serif text-[20px] italic leading-8 text-ink-invertmuted">Claudia Cady</p>
-          <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="about.text">The institute is led by Claudia Cady, counsellor and psychoanalyst, registered member of the Australian Counselling Association. She has worked in counselling since 2008, with a focus on trauma, grief, life transitions and complex emotional challenges.</p>
+          <p class="mt-5 max-w-2xl text-ink-invertmuted" data-i18n="about.text1">Claudia Cady is a counsellor and psychoanalyst, and a Level 2 registered member of the Australian Counselling Association (M.A.C.A. 82250). With a professional background in education since 1999 and therapeutic practice since 2008, she brings extensive experience in supporting individuals through emotional challenges, trauma, grief, relationship difficulties and significant life transitions.</p>
+          <p class="mt-4 max-w-2xl text-ink-invertmuted" data-i18n="about.text2">Her approach draws on psychodynamic and psychoanalytic perspectives, trauma-informed care and an integrative understanding of human experience. Her ongoing academic and professional development spans counselling, pastoral counselling, psychoanalysis, psychology and education, reflecting a commitment to continued learning and thoughtful clinical practice.</p>
+          <p class="mt-4 max-w-2xl text-ink-invertmuted" data-i18n="about.text3">As the founder of Atma Qatarse Institute and <span translate="no">Ágape Women's Support</span>, Claudia brings together clinical experience, education and a commitment to making therapeutic support more accessible. Her work is grounded in attentive listening, respect for each person's individuality and the belief that meaningful change begins with deeper understanding.</p>
         </div>
       </div>
     </div>
 
-    <div class="wave wave-bottom text-surface" aria-hidden="true">
+    <div class="wave wave-bottom text-surface-sunken" aria-hidden="true">
       <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 58C260 80 460 36 720 28C980 20 1200 84 1440 48V90H0Z" fill="currentColor"/></svg>
     </div>
   </section>
 
-  <!-- Treinamento e supervisão -->
-  <section id="practitioners" class="bg-surface">
-    <div class="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 lg:pb-24">
-      <div class="reveal mx-auto max-w-3xl text-center">
-        <h2 class="font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="practitioners.title">For practitioners</h2>
+  <!-- Encaminhamentos profissionais: médicos, centros médicos, allied health, support coordinators
+       e organizações comunitárias. Acesso pela seção Sessions e pelo rodapé. -->
+  <section id="referrers" class="bg-surface-sunken">
+    <div class="mx-auto max-w-3xl px-4 pb-20 pt-10 sm:px-6 lg:pb-24">
+      <div class="reveal text-center">
+        <h2 class="font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="referrers.title">For Referrers</h2>
         <span class="mx-auto mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
-        <p class="mt-6 text-ink-muted" data-i18n="practitioners.text">Training and supervision are opening in stages. Leave your details and you will hear when each one opens.</p>
+      </div>
+      <div class="reveal mt-8 space-y-4 text-ink-muted">
+        <p class="text-[19px] leading-[30px] text-ink" data-i18n="referrers.text1">Atma Qatarse Institute welcomes professional referrals for individual and couples counselling.</p>
+        <p data-i18n="referrers.text2">Our services support people experiencing emotional distress, trauma, grief and loss, relationship difficulties, and significant life transitions.</p>
+        <p data-i18n="referrers.text3">Appointments are available online, with mobile counselling and home visits offered across selected regional communities, subject to availability. A small online group for women, focused on domestic and family violence support, is also offered free of charge.</p>
+        <p data-i18n="referrers.text4">Through <span translate="no">Ágape Women's Support</span>, the Institute is also developing free community-based group initiatives focused on women's emotional wellbeing, connection and support, including experiences related to domestic and family violence. Participation is subject to the scope, availability and suitability of each programme.</p>
+        <p data-i18n="referrers.text5">We welcome enquiries from general practitioners, healthcare professionals, community organisations and other professionals seeking appropriate counselling support for the people they work with.</p>
+        <p data-i18n="referrers.text6">To discuss a referral or request further information, please contact the Institute using the professional enquiry option below.</p>
+      </div>
+      <!-- PENDENTE: formulário próprio no Google Forms (depende do domínio e do e-mail do instituto).
+           Até lá, o botão leva ao formulário da página com o assunto Professional Referral marcado. -->
+      <div class="reveal mt-9 text-center">
+        <a href="#contact" data-interest="Professional Referral" class="inline-flex items-center justify-center rounded-full bg-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="referrers.cta">Make a Professional Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profissionais: mentoria para recém-formados, webinar gratuito, formação e supervisão -->
+  <section id="practitioners" class="bg-surface">
+    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:py-24">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <h2 class="font-display text-display-m font-medium uppercase text-brand-midnight sm:text-display-l" data-i18n="practitioners.title">For Practitioners</h2>
+        <span class="mx-auto mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+        <p class="mt-6 text-ink-muted" data-i18n="practitioners.text">Professional mentoring for new counsellors is open now. Training and supervision are opening in stages.</p>
       </div>
 
       <div class="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
+        <article id="mentoring" class="reveal marble flex flex-col rounded-[32px] bg-brand-midnight p-8 text-ink-invert sm:p-10">
+          <h3 class="font-display text-[26px] font-medium uppercase leading-9 tracking-[0.04em]" data-i18n="mentoring.title">Beginning your counselling practice</h3>
+          <p class="mt-4 text-ink-invertmuted" data-i18n="mentoring.text1">Completing a counselling qualification is an important achievement. Yet the transition from training to professional practice can bring new questions about confidence, ethical responsibilities, professional identity and the practical steps involved in beginning a career.</p>
+          <p class="mb-8 mt-4 text-ink-invertmuted" data-i18n="mentoring.text2">Atma Qatarse Institute offers individual professional mentoring and a structured three-session programme designed to support newly qualified counsellors as they navigate this transition.</p>
+          <!-- PENDENTE: link direto do evento de mentoria no Cal.com, quando o Wayne configurar. -->
+          <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="mt-auto inline-flex items-center justify-center self-start rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="mentoring.cta">Explore Professional Mentoring</a>
+        </article>
+
+        <!-- Webinar gratuito. O botão só ativa quando vídeo, manual e envio automático por e-mail
+             estiverem prontos e testados: preencher EXTERNAL_LINKS.webinar em js/main.js.
+             O formulário deve entregar o material sem exigir aceite de marketing; inscrição em
+             mailing list precisa de consentimento próprio. -->
+        <article id="webinar" class="reveal flex flex-col rounded-[32px] bg-surface-sunken p-8 sm:p-10">
+          <span class="self-start rounded-full bg-surface px-4 py-1.5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-accent-ink" data-i18n="webinar.badge">Free webinar</span>
+          <h3 class="mt-5 font-display text-[26px] font-medium uppercase leading-9 tracking-[0.04em] text-brand-midnight" data-i18n="webinar.title">Your next steps as a new counsellor</h3>
+          <p class="mt-4 font-semibold text-ink" data-i18n="webinar.text1">Not sure where to begin after completing your counselling qualification?</p>
+          <p class="mt-3 text-ink-muted" data-i18n="webinar.text2">Register to receive a free one-hour recorded webinar exploring some of the practical and professional questions that arise when beginning counselling practice, together with a short introductory guide.</p>
+          <p class="mb-8 mt-3 text-ink-muted" data-i18n="webinar.text3">The webinar also introduces opportunities for further individual mentoring and structured professional support.</p>
+          <a href="#webinar" data-link="webinar" data-closed="webinar.closed" class="mt-auto inline-flex items-center justify-center self-start rounded-full bg-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="webinar.cta">Get the Free Webinar &amp; Guide</a>
+        </article>
+      </div>
+
+      <div class="mx-auto mt-6 grid max-w-5xl gap-6 md:grid-cols-2">
         <!-- PENDENTE: texto da Claudia sobre o treinamento (formato, público, datas). -->
         <article id="training" class="reveal flex flex-col items-center rounded-[32px] bg-surface-sunken p-8 text-center sm:p-10">
           <span class="rounded-full bg-surface px-4 py-1.5 text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-accent-ink" data-i18n="training.badge">Pilot in preparation</span>
@@ -481,7 +549,22 @@
             <span data-i18n="faq.languages.q">In which languages can I have sessions?</span>
             <span class="toggle" aria-hidden="true"></span>
           </summary>
-          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.languages.a">In English, Portuguese or Spanish. Sessions are held online.</p>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.languages.a">In English, Portuguese or Spanish. Sessions are held online across Australia, with mobile counselling available in selected regional communities.</p>
+        </details>
+        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+          <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
+            <span data-i18n="faq.confidential.q">Is counselling confidential?</span>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.confidential.a">Counselling is conducted with respect for your privacy and confidentiality. Information is handled in accordance with applicable privacy obligations and professional ethical standards. There are circumstances in which disclosure may be required or permitted by law or necessary to address serious safety concerns. These limits are explained before counselling begins.</p>
+        </details>
+        <!-- Texto provisório: não confirma que o instituto já aceita NDIS, EAP ou planos de saúde. -->
+        <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
+          <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
+            <span data-i18n="faq.funding.q">Can I use private health insurance, NDIS or an Employee Assistance Program (EAP) to access counselling?</span>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="pb-5 text-[15px] leading-6 text-ink-muted" data-i18n="faq.funding.a">Funding and payment arrangements depend on individual eligibility and the agreements available through the practice. Please contact us before booking if you wish to enquire about a particular funding arrangement.</p>
         </details>
         <details class="rounded-[24px] bg-surface-raised px-6 ring-1 ring-line">
           <summary class="flex items-center justify-between gap-4 py-5 text-[17px] font-semibold leading-6">
@@ -516,7 +599,7 @@
         <div class="reveal">
           <h2 class="font-display text-display-m font-medium uppercase text-ink-invert sm:text-display-l" data-i18n="contact.title">Start with a conversation</h2>
           <span class="mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
-          <p class="mt-6 max-w-xl text-ink-invertmuted" data-i18n="contact.text">To begin sessions, choose a time in the calendar. For training, supervision or anything else, write to Claudia using the form and she will reply.</p>
+          <p class="mt-6 max-w-xl text-ink-invertmuted" data-i18n="contact.text">To begin counselling or explore professional mentoring, please choose a service and appointment time through our booking calendar. For enquiries about referrals, training, community projects or other services, please use the contact form below. We look forward to hearing from you.</p>
           <p class="mt-8 max-w-xl font-serif text-[22px] italic leading-9 text-ink-invert" data-i18n="contact.quote">Depth creates freedom.</p>
           <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center rounded-full bg-navy-action px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-brand-charcoal hover:bg-navy-actionhover" data-i18n="cta.book">Book a session</a>
         </div>
@@ -525,7 +608,7 @@
              Nada sai sem a pessoa apertar enviar lá. O texto do formulário diz isso.
              Sem WhatsApp: a Claudia não quer o WhatsApp profissional como canal público (Arquivo 002, seção 3). -->
         <form id="contact-form" novalidate class="reveal rounded-[32px] bg-surface p-7 text-ink sm:p-9">
-          <h3 class="text-[20px] font-semibold leading-7" data-i18n="form.title">Write to Claudia</h3>
+          <h3 class="text-[20px] font-semibold leading-7" data-i18n="form.title">Write to us</h3>
           <p class="mt-2 text-[15px] leading-6 text-ink-muted" data-i18n="form.intro">Fill in your name and what you are looking for. The message opens ready in your email app, and it only goes out when you press send there.</p>
           <div class="mt-6 space-y-5">
             <div data-field>
@@ -535,10 +618,14 @@
             </div>
             <fieldset data-field>
               <legend class="text-[15px] font-semibold leading-5" data-i18n="form.interest">Your interest</legend>
-              <div class="mt-2 grid grid-cols-3 gap-2">
+              <div class="mt-2 grid grid-cols-2 gap-2">
                 <label class="interest-option relative">
                   <input type="radio" name="interest" value="Sessions" required>
                   <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.sessions">Sessions</span>
+                </label>
+                <label class="interest-option relative">
+                  <input type="radio" name="interest" value="Professional Referral">
+                  <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.referral">Professional Referral</span>
                 </label>
                 <label class="interest-option relative">
                   <input type="radio" name="interest" value="Training">
@@ -547,6 +634,14 @@
                 <label class="interest-option relative">
                   <input type="radio" name="interest" value="Supervision">
                   <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.supervision">Supervision</span>
+                </label>
+                <label class="interest-option relative">
+                  <input type="radio" name="interest" value="Community Projects">
+                  <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.community">Community Projects</span>
+                </label>
+                <label class="interest-option relative">
+                  <input type="radio" name="interest" value="Other">
+                  <span class="flex h-full items-center justify-center rounded-full border border-line-strong px-2 py-3 text-center text-[14px] font-semibold leading-5" data-i18n="form.interest.other">Other</span>
                 </label>
               </div>
               <p class="error-text mt-2 hidden text-[13px] font-semibold leading-5 text-danger" data-i18n="form.interest.error">Choose one option.</p>
@@ -581,9 +676,20 @@
     <div class="text-[13px] leading-6 text-ink-invertmuted md:text-right">
       <!-- PENDENTE: e-mail e redes próprios do instituto. Estes são os da Ágape Women's Support. -->
       <p><a href="mailto:agape@agapewomenssupport.com.au" class="text-navy-accentink hover:underline">agape@agapewomenssupport.com.au</a></p>
-      <p><a href="https://www.instagram.com/agapewomenssupport" target="_blank" rel="noopener" class="text-navy-accentink hover:underline">Instagram</a> · <a href="https://www.facebook.com/share/1C54jpnMUU/" target="_blank" rel="noopener" class="text-navy-accentink hover:underline">Facebook</a></p>
-      <p data-i18n="footer.rights">© 2026 Atma Qatarse Institute. All rights reserved.</p>
+      <p><a href="https://www.instagram.com/agapewomenssupport" target="_blank" rel="noopener" class="text-navy-accentink hover:underline">Instagram</a> · <a href="https://www.facebook.com/share/1C54jpnMUU/" target="_blank" rel="noopener" class="text-navy-accentink hover:underline">Facebook</a> · <a href="#referrers" class="text-navy-accentink hover:underline" data-i18n="footer.referrers">For Referrers</a></p>
     </div>
+  </div>
+  <div class="mx-auto flex max-w-6xl flex-col gap-3 border-t border-navy-line px-4 py-6 text-[13px] leading-6 text-ink-invertmuted sm:px-6 md:flex-row md:items-center md:justify-between">
+    <p data-i18n="footer.location">Based in Henty, NSW | Online Counselling Australia-wide | Regional Mobile Counselling by Arrangement</p>
+    <!-- Textos das políticas virão da Claudia; as páginas avisam que estão em preparação até lá. -->
+    <p class="flex flex-wrap gap-x-4 md:justify-end">
+      <a href="privacy.html" class="text-navy-accentink hover:underline" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="terms.html" class="text-navy-accentink hover:underline" data-i18n="footer.terms">Terms &amp; Conditions</a>
+      <a href="cancellation.html" class="text-navy-accentink hover:underline" data-i18n="footer.cancellation">Cancellation Policy</a>
+    </p>
+  </div>
+  <div class="mx-auto max-w-6xl px-4 pb-8 text-[13px] leading-6 text-ink-invertmuted sm:px-6">
+    <p data-i18n="footer.rights">© 2026 Atma Qatarse Institute. All rights reserved.</p>
   </div>
 </footer>
 

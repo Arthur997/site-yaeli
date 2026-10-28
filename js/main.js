@@ -1,4 +1,4 @@
-/* Base da landing page: header no scroll, link ativo do menu, inscrição nos grupos,
+/* Base da landing page: header no scroll, link ativo do menu, links externos pendentes,
    carrossel de depoimentos, entrada das seções, troca de idioma e envio do formulário. */
 
 (function ($) {
@@ -13,14 +13,17 @@
   var LANG_STORAGE_KEY = 'aq-lang';
   var HTML_LANG = { en: 'en', pt: 'pt-BR' };
   var currentLang = DEFAULT_LANG;
+  /* Páginas internas (políticas) indicam a própria chave de título em <html data-title-key>. */
+  var TITLE_KEY = document.documentElement.getAttribute('data-title-key') || 'meta.title';
 
-  /* Link da Humanitix de cada grupo. Vazio = inscrição ainda não aberta. */
-  var HUMANITIX_LINKS = {
-    october: '',
-    november: '',
-    december: ''
+  /* Links externos ainda pendentes, ligados aos botões por data-link.
+     Vazio: botão com data-closed fica desativado com aquele aviso; sem data-closed mantém o href da página. */
+  var EXTERNAL_LINKS = {
+    agape: '',              /* Humanitix: atividades da Ágape */
+    'group-november': '',   /* Humanitix: encontro de 21/11 */
+    'group-december': '',   /* Humanitix: encontro de 13/12 */
+    webinar: ''             /* Formulário do webinar: só depois de vídeo, manual e e-mail testados */
   };
-  var REGISTRATION_CLOSED_LABEL = 'Registration opens soon';
 
   /* Header ganha a borda inferior só depois que a página rola. */
   function bindHeaderBorder() {
@@ -68,27 +71,31 @@
     updateActive();
   }
 
-  /* Grupo com link leva à Humanitix; grupo sem link avisa que a inscrição ainda não abriu. */
-  function bindGroupRegistration() {
-    $('[data-group]').each(function () {
+  /* A classe própria vem depois dos utilitários de cor: sem removê-los ela perderia a disputa. */
+  function disableButton($button, labelKey) {
+    $button
+      .removeAttr('href')
+      .attr({ role: 'link', 'aria-disabled': 'true' })
+      .removeClass(function (_, classes) {
+        return (classes.match(/\S*(bg-|text-ink|border|shadow)\S*/g) || []).join(' ');
+      })
+      .addClass('registration-closed')
+      .attr('data-i18n', labelKey)
+      .text(translate(labelKey));
+  }
+
+  /* Botão com link configurado abre o destino externo; sem link, desativa ou fica no href da página. */
+  function bindExternalLinks() {
+    $('[data-link]').each(function () {
       var $button = $(this);
-      var url = HUMANITIX_LINKS[$button.data('group')];
+      var url = EXTERNAL_LINKS[$button.data('link')];
+      var closedLabelKey = $button.data('closed');
 
       if (url) {
         $button.attr({ href: url, target: '_blank', rel: 'noopener' });
-        return;
+      } else if (closedLabelKey) {
+        disableButton($button, closedLabelKey);
       }
-
-      /* A classe própria vem depois dos utilitários de cor: sem removê-los ela perderia a disputa. */
-      $button
-        .removeAttr('href')
-        .attr({ role: 'link', 'aria-disabled': 'true' })
-        .removeClass(function (_, classes) {
-          return (classes.match(/\S*(bg-|text-ink|border|shadow)\S*/g) || []).join(' ');
-        })
-        .addClass('registration-closed')
-        .attr('data-i18n', 'group.closed')
-        .text(REGISTRATION_CLOSED_LABEL);
     });
   }
 
@@ -131,7 +138,7 @@
     });
 
     document.documentElement.lang = HTML_LANG[currentLang];
-    document.title = translate('meta.title');
+    document.title = translate(TITLE_KEY);
     $('meta[name="description"]').attr('content', translate('meta.description'));
     $('[data-lang]').each(function () {
       $(this).attr('aria-pressed', String($(this).data('lang') === currentLang));
@@ -172,7 +179,7 @@
     });
   }
 
-  /* Quem vem de "Training" ou "Supervision" chega ao formulário com o interesse marcado. */
+  /* Quem vem de um botão com data-interest (Training, Supervision, Professional Referral) chega ao formulário com o interesse marcado. */
   function bindInterestShortcuts() {
     $('[data-interest]').on('click', function () {
       $('#contact-form input[name="interest"][value="' + $(this).data('interest') + '"]')
@@ -314,10 +321,10 @@
   $(function () {
     bindHeaderBorder();
     bindActiveSection();
-    bindGroupRegistration();
+    bindExternalLinks();
     bindInterestShortcuts();
     bindCarousel();
-    /* Depois da inscrição e do carrossel: os dois mudam textos que a troca de idioma precisa ver. */
+    /* Depois dos links externos e do carrossel: os dois mudam textos que a troca de idioma precisa ver. */
     bindLanguageSwitch();
     bindReveal();
     bindForm();
