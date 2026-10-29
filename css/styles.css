@@ -339,6 +339,47 @@ html:not(.js) .tab[aria-selected='true'] {
   }
 }
 
+/* Menu lateral do celular: o painel entra pela direita e o fundo escurece junto.
+   O atributo hidden só é tirado/posto em js/main.js antes de abrir e depois de fechar. */
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+}
+.drawer[hidden] {
+  display: none;
+}
+.drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 29, 40, 0.5);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(340px, 86vw);
+  height: 100%;
+  overflow-y: auto;
+  background: #f6f2e8;
+  transform: translateX(100%);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.drawer.is-open .drawer-backdrop {
+  opacity: 1;
+}
+.drawer.is-open .drawer-panel {
+  transform: none;
+}
+/* Com o menu aberto a página de trás não rola. */
+.menu-open {
+  overflow: hidden;
+}
+
 /* Inscrição ainda sem link: o botão avisa e não leva a lugar nenhum.
    Fundo claro para se destacar sobre os cards em bege. */
 .registration-closed {
@@ -368,7 +409,9 @@ html:not(.js) .tab[aria-selected='true'] {
   }
   .tab,
   .tab-indicator,
-  .tab-panels {
+  .tab-panels,
+  .drawer-backdrop,
+  .drawer-panel {
     transition: none;
   }
 }

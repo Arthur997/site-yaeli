@@ -38,6 +38,9 @@ window.AQ_I18N = {
     'nav.practitioners': 'Para Profissionais',
     'nav.questions': 'Dúvidas',
     'cta.book': 'Agendar sessão',
+    'menu.open': 'Abrir menu',
+    'menu.close': 'Fechar menu',
+    'menu.contact': 'Contato',
 
     /* Hero */
     'hero.overline': 'Atendimento terapêutico · Formação · Supervisão',

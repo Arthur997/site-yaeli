@@ -172,9 +172,39 @@
         <button type="button" data-lang="pt" aria-pressed="false" class="lang-option rounded-full px-2.5 py-1.5" lang="pt-BR"><span class="2xl:hidden">PT</span><span class="hidden 2xl:inline">Português</span></button>
       </div>
       <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-action px-4 py-2.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover sm:px-5" data-i18n="cta.book">Book a session</a>
+      <!-- Abaixo de 1024px o menu some do cabeçalho: este botão abre o painel lateral (#mobile-menu). -->
+      <button type="button" class="menu-toggle flex h-11 w-11 flex-none items-center justify-center rounded-full border border-line-strong text-brand-midnight hover:bg-action-subtle lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" data-i18n-aria="menu.open">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- Menu do celular: painel que desliza da direita sobre um fundo escurecido.
+     Fecha no X, no fundo, na tecla Esc ou ao escolher uma seção. -->
+<div id="mobile-menu" class="drawer lg:hidden" hidden>
+  <div class="drawer-backdrop" data-close-menu></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+    <div class="flex items-center justify-between border-b border-line px-6 py-4">
+      <p id="mobile-menu-title" class="font-display text-[20px] font-medium uppercase leading-7 tracking-[0.08em] text-brand-midnight">Menu</p>
+      <button type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-line-strong text-brand-midnight hover:bg-action-subtle" aria-label="Close menu" data-i18n-aria="menu.close" data-close-menu>
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col px-3 py-4 text-[17px] font-semibold" aria-label="Sections" data-i18n-aria="nav.label">
+      <a href="#approach" class="rounded-2xl px-4 py-3.5 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.approach">Approach</a>
+      <a href="#sessions" class="rounded-2xl px-4 py-3.5 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.sessions">Sessions</a>
+      <a href="#group" class="rounded-2xl px-4 py-3.5 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.group"><span translate="no">Ágape</span> Project</a>
+      <a href="#referrers" class="rounded-2xl px-4 py-3.5 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.referrers">For Referrers</a>
+      <a href="#practitioners" class="rounded-2xl px-4 py-3.5 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.practitioners">For Practitioners</a>
+      <a href="#questions" class="rounded-2xl px-4 py-3.5 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="nav.questions">Questions</a>
+      <a href="#contact" class="rounded-2xl px-4 py-3.5 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="menu.contact">Contact</a>
+    </nav>
+    <div class="mt-auto border-t border-line px-6 py-6">
+      <a href="https://cal.com/agape-women-s-support-aoerdr" target="_blank" rel="noopener" class="flex w-full items-center justify-center rounded-full bg-action px-5 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-ink-invert hover:bg-action-hover" data-i18n="cta.book">Book a session</a>
+    </div>
+  </div>
+</div>
 
 <main id="top" class="pt-16">
 

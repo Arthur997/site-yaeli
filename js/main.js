@@ -215,6 +215,78 @@
     });
   }
 
+  /* Menu lateral do celular. Abre pelo botão do cabeçalho; fecha no X, no fundo, com Esc
+     ou ao escolher uma seção. O foco fica preso no painel enquanto ele está aberto. */
+  var MENU_ANIMATION_MS = 350;
+
+  function bindMobileMenu() {
+    var $menu = $('#mobile-menu');
+    var $toggle = $('.menu-toggle');
+    var closeTimer = null;
+
+    if (!$menu.length) {
+      return;
+    }
+
+    function focusableItems() {
+      return $menu.find('a[href], button').filter(':visible');
+    }
+
+    function open() {
+      clearTimeout(closeTimer);
+      $menu.prop('hidden', false);
+      void $menu.get(0).offsetWidth; /* aplica o estado fechado antes de animar */
+      $menu.addClass('is-open');
+      $('body').addClass('menu-open');
+      $toggle.attr('aria-expanded', 'true');
+      $menu.find('[data-close-menu]').filter('button').trigger('focus');
+    }
+
+    function close(returnFocus) {
+      $menu.removeClass('is-open');
+      $('body').removeClass('menu-open');
+      $toggle.attr('aria-expanded', 'false');
+      closeTimer = setTimeout(function () { $menu.prop('hidden', true); }, MENU_ANIMATION_MS);
+      if (returnFocus) {
+        $toggle.trigger('focus');
+      }
+    }
+
+    $toggle.on('click', open);
+    $menu.on('click', '[data-close-menu]', function () { close(true); });
+    /* O link da seção fecha o menu e deixa a âncora rolar a página normalmente. */
+    $menu.on('click', 'nav a', function () { close(false); });
+
+    $menu.on('keydown', function (event) {
+      if (event.key === 'Escape') {
+        close(true);
+        return;
+      }
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      var $items = focusableItems();
+      var first = $items.get(0);
+      var last = $items.get($items.length - 1);
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    /* Se a tela crescer até o menu do cabeçalho aparecer, o painel fecha sozinho. */
+    $(window).on('resize', function () {
+      if ($menu.hasClass('is-open') && !$toggle.is(':visible')) {
+        close(false);
+      }
+    });
+  }
+
   /* A altura do contêiner vai da antiga à nova em vez de saltar; no fim volta a ser automática. */
   function animateHeight(wrapper, change) {
     var startHeight = wrapper.offsetHeight;
@@ -435,6 +507,7 @@
 
   $(function () {
     bindHeaderBorder();
+    bindMobileMenu();
     bindActiveSection();
     bindExternalLinks();
     bindInterestShortcuts();
