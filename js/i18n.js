@@ -7,21 +7,21 @@
 
 window.AQ_I18N = {
   en: {
-    'meta.title': 'Online Counselling in Australia, Trauma-Informed | Atma Qatarse Institute',
+    'meta.title': 'Online Counselling in Australia, Trauma-Informed | Átma Qatarse Institute',
     'meta.description': 'Counselling with Claudia Cady, ACA-registered counsellor and psychoanalyst. Online across Australia and mobile visits from Henty, NSW. In English, Portuguese and Spanish.',
     'carousel.dot': 'Show testimonial {n}',
     'group.closed': 'Registration opens soon',
     'webinar.closed': 'Available soon',
-    'policy.privacy.meta': 'Privacy Policy | Atma Qatarse Institute',
-    'policy.terms.meta': 'Terms & Conditions | Atma Qatarse Institute',
-    'policy.cancellation.meta': 'Cancellation Policy | Atma Qatarse Institute',
+    'policy.privacy.meta': 'Privacy Policy | Átma Qatarse Institute',
+    'policy.terms.meta': 'Terms & Conditions | Átma Qatarse Institute',
+    'policy.cancellation.meta': 'Cancellation Policy | Átma Qatarse Institute',
     'message.greeting': 'Hello,',
     'message.name': 'My name is {name}.',
     'message.about': 'I would like to know more about: {interest}.'
   },
 
   pt: {
-    'meta.title': 'Terapia Online em Português na Austrália | Atma Qatarse Institute',
+    'meta.title': 'Terapia Online em Português na Austrália | Átma Qatarse Institute',
     'meta.description': 'Terapia com Claudia Cady, psicanalista e counsellor registrada na Australian Counselling Association. Online em toda a Austrália e visitas a partir de Henty, NSW. Em português, inglês e espanhol.',
     'carousel.dot': 'Mostrar depoimento {n}',
     'message.greeting': 'Olá,',
@@ -42,7 +42,7 @@ window.AQ_I18N = {
     /* Hero */
     'hero.overline': 'Atendimento terapêutico · Formação · Supervisão',
     'hero.title': 'Uma vida mais profunda e integrada.',
-    'hero.lead': 'O Atma Qatarse Institute reúne prática terapêutica, formação profissional e supervisão. Oferece terapia online individual e de casal, atendimento itinerante em comunidades regionais selecionadas, grupos terapêuticos e oportunidades em desenvolvimento de formação e mentoria profissional.',
+    'hero.lead': 'O Átma Qatarse Institute reúne prática terapêutica, formação profissional e supervisão. Oferece terapia online individual e de casal, atendimento itinerante em comunidades regionais selecionadas, grupos terapêuticos e oportunidades em desenvolvimento de formação e mentoria profissional.',
     'hero.cta': 'Dê o primeiro passo: agende uma sessão',
     'hero.groups': 'Ver as datas dos grupos',
     'hero.note': 'Cuidado informado pelo trauma. Atendimento em português, inglês e espanhol.',
@@ -76,7 +76,7 @@ window.AQ_I18N = {
     'sessions.mobile.text2': 'Os atendimentos itinerantes podem ser combinados na região entre Wagga Wagga e Wodonga, conforme o local e a disponibilidade. Atendimentos itinerantes confirmados têm uma taxa adicional de deslocamento de $25.',
     'sessions.development': 'Grupos e desenvolvimento profissional',
     'sessions.agape': 'Projeto <span translate="no">Ágape</span>: grupos de apoio comunitário',
-    'sessions.agape.text1': 'Por meio da <span translate="no">Ágape Women\'s Support</span>, o Atma Qatarse Institute oferece iniciativas comunitárias gratuitas que reúnem mulheres em um ambiente acolhedor de reflexão, conexão e compreensão compartilhada.',
+    'sessions.agape.text1': 'Por meio da <span translate="no">Ágape Women\'s Support</span>, o Átma Qatarse Institute oferece iniciativas comunitárias gratuitas que reúnem mulheres em um ambiente acolhedor de reflexão, conexão e compreensão compartilhada.',
     'sessions.agape.text2': 'Nossas atividades incluem grupos de apoio online sobre o bem-estar emocional das mulheres, relacionamentos e experiências de violência doméstica e familiar, com ênfase na dignidade, na segurança e na importância de relações de apoio.',
     'sessions.agape.text3': 'Profissionais de saúde e organizações comunitárias podem entrar em contato para conhecer essas iniciativas e avaliar possibilidades de encaminhamento.',
     'sessions.agape.cta': 'Conhecer as atividades da <span translate="no">Ágape</span>',
@@ -85,7 +85,7 @@ window.AQ_I18N = {
     'sessions.mentoring.text1': 'Para counsellors recém-formados que estão começando a carreira, a mentoria individual é um espaço para trabalhar a passagem da formação para a prática, a identidade profissional, as questões éticas e os desafios práticos de construir uma carreira em counselling.',
     'sessions.mentoring.text2': 'Há sessões avulsas e um pacote estruturado de três sessões de mentoria.',
     'location.title': 'Local e disponibilidade',
-    'location.text1': 'Com base em Henty, Nova Gales do Sul, o Atma Qatarse Institute oferece terapia online em toda a Austrália e atendimento itinerante em comunidades regionais selecionadas entre Wagga Wagga e Wodonga.',
+    'location.text1': 'Sediado em Henty, Nova Gales do Sul, o Átma Qatarse Institute oferece terapia online em toda a Austrália e atendimento itinerante em comunidades regionais selecionadas entre Wagga Wagga e Wodonga.',
     'location.text2': 'Visitas domiciliares são combinadas previamente e dependem do local, da adequação e da disponibilidade de horários. Atendimentos itinerantes confirmados têm uma taxa adicional de deslocamento de $25.',
     'location.text3': 'Atendimento em português, inglês e espanhol.',
     'sessions.cta': 'Ver atendimentos e agendar',
@@ -93,7 +93,7 @@ window.AQ_I18N = {
 
     /* Para quem encaminha */
     'referrers.title': 'Para quem encaminha',
-    'referrers.text1': 'O Atma Qatarse Institute recebe encaminhamentos profissionais para terapia individual e de casal.',
+    'referrers.text1': 'O Átma Qatarse Institute recebe encaminhamentos profissionais para terapia individual e de casal.',
     'referrers.text2': 'Nossos serviços atendem pessoas que vivem sofrimento emocional, trauma, luto e perdas, dificuldades nos relacionamentos e transições de vida importantes.',
     'referrers.text3': 'Os atendimentos são online, com terapia itinerante e visitas domiciliares em comunidades regionais selecionadas, conforme a disponibilidade. Há também um pequeno grupo online para mulheres, gratuito, voltado ao apoio em situações de violência doméstica e familiar.',
     'referrers.text4': 'Por meio da <span translate="no">Ágape Women\'s Support</span>, o instituto também está desenvolvendo iniciativas comunitárias gratuitas em grupo, voltadas ao bem-estar emocional, à conexão e ao apoio às mulheres, incluindo experiências de violência doméstica e familiar. A participação depende do escopo, da disponibilidade e da adequação de cada programa.',
@@ -105,13 +105,13 @@ window.AQ_I18N = {
     'group.overline': 'Projeto comunitário',
     'group.title': 'Sobre a <span translate="no">Ágape Women\'s Support</span>',
     'group.text': 'A <span translate="no">Ágape Women\'s Support</span> (AWS) é um projeto comunitário voltado às mulheres, criado para oferecer espaços acessíveis, respeitosos e acolhedores de reflexão, escuta e conexão.',
-    'group.text2': 'Acreditamos que oportunidades de cuidado emocional, autocompreensão e conexão não devem depender exclusivamente da capacidade financeira. Por isso, o AWS busca criar um espaço no qual experiências possam ser compartilhadas, escutadas e refletidas, favorecendo compreensão, conexão e construção de significado.',
+    'group.text2': 'Acreditamos que oportunidades de cuidado emocional, autocompreensão e conexão não devem depender exclusivamente da capacidade financeira. Por isso, a AWS busca criar um espaço no qual experiências possam ser compartilhadas, escutadas e refletidas, favorecendo compreensão, conexão e construção de significado.',
     'group.do.title': 'O que fazemos',
-    'group.do.text1': 'Atualmente, o AWS desenvolve duas atividades principais: o Grupo Terapêutico para Mulheres e o Blog / Reflexões.',
+    'group.do.text1': 'Atualmente, a AWS desenvolve duas atividades principais: o Grupo Terapêutico para Mulheres e o Blog / Reflexões.',
     'group.do.text2': 'O Grupo Terapêutico para Mulheres acontece online, em pequenos grupos facilitados, criando espaço para reflexão e diálogo sobre experiências que atravessam a vida das mulheres, incluindo trauma, luto e perdas, sexualidade, corpo, família, relacionamentos, identidade, limites e sobrecarga emocional.',
     'group.do.text3': 'O Blog / Reflexões reúne textos relacionados às experiências das mulheres e aos temas explorados pelo projeto, oferecendo oportunidades de continuidade da reflexão para além dos encontros.',
     'group.access.title': 'Acessibilidade e participação',
-    'group.access.text1': 'A condição financeira não deve ser uma barreira à participação. Por isso, os grupos do AWS não possuem taxa obrigatória. A participante pode se inscrever por $0.',
+    'group.access.text1': 'A condição financeira não deve ser uma barreira à participação. Por isso, os grupos da AWS não possuem taxa obrigatória. A participante pode se inscrever por $0.',
     'group.access.text2': 'Para aquelas que desejarem contribuir com a continuidade do projeto, haverá também a possibilidade de contribuição voluntária. A contribuição financeira não altera o acesso ou a experiência de participação no grupo.',
     'group.founded.title': 'Fundação e facilitação',
     'group.founded.text1': 'A <span translate="no">Ágape Women\'s Support</span> foi fundada por Claudia Cady, counsellor e facilitadora, e vem sendo desenvolvida desde 2020.',
@@ -132,16 +132,16 @@ window.AQ_I18N = {
 
     /* Quem conduz */
     'about.title': 'Quem conduz o trabalho',
-    'about.text1': 'Claudia Cady é counsellor e psicanalista, membro registrada Nível 2 da Australian Counselling Association (M.A.C.A. 82250). Com trajetória profissional na educação desde 1999 e na prática terapêutica desde 2008, tem ampla experiência no acompanhamento de pessoas em desafios emocionais, trauma, luto, dificuldades nos relacionamentos e transições de vida importantes.',
+    'about.text1': 'Claudia Cady é counsellor e psicanalista, membro registrado de Nível 2 da Australian Counselling Association (M.A.C.A. 82250). Com trajetória profissional na educação desde 1999 e na prática terapêutica desde 2008, tem ampla experiência no acompanhamento de pessoas em desafios emocionais, trauma, luto, dificuldades nos relacionamentos e transições de vida importantes.',
     'about.text2': 'Sua abordagem se apoia nas perspectivas psicodinâmica e psicanalítica, no cuidado informado pelo trauma e em uma compreensão integrativa da experiência humana. Sua formação acadêmica e profissional, sempre em andamento, abrange counselling, aconselhamento pastoral, psicanálise, psicologia e educação, o que reflete o compromisso com o aprendizado contínuo e com uma prática clínica cuidadosa.',
-    'about.text3': 'Fundadora do Atma Qatarse Institute e da <span translate="no">Ágape Women\'s Support</span>, Claudia une experiência clínica, educação e o compromisso de tornar o apoio terapêutico mais acessível. Seu trabalho se baseia na escuta atenta, no respeito à singularidade de cada pessoa e na convicção de que a mudança significativa começa por uma compreensão mais profunda.',
+    'about.text3': 'Fundadora do Átma Qatarse Institute e da <span translate="no">Ágape Women\'s Support</span>, Claudia une experiência clínica, educação e o compromisso de tornar o apoio terapêutico mais acessível. Seu trabalho se baseia na escuta atenta, no respeito à singularidade de cada pessoa e na convicção de que a mudança significativa começa por uma compreensão mais profunda.',
 
     /* Profissionais */
     'practitioners.title': 'Para Profissionais',
     'practitioners.text': 'A mentoria profissional para novos counsellors já está aberta. Formação e supervisão estão abrindo em etapas.',
     'mentoring.title': 'Começando sua prática em counselling',
     'mentoring.text1': 'Concluir uma formação em counselling é uma conquista importante. Mas a passagem da formação para a prática profissional pode trazer novas questões sobre segurança, responsabilidades éticas, identidade profissional e os passos práticos para começar a carreira.',
-    'mentoring.text2': 'O Atma Qatarse Institute oferece mentoria profissional individual e um programa estruturado de três sessões, pensado para apoiar counsellors recém-formados nessa transição.',
+    'mentoring.text2': 'O Átma Qatarse Institute oferece mentoria profissional individual e um programa estruturado de três sessões, pensado para apoiar counsellors recém-formados nessa transição.',
     'mentoring.cta': 'Conhecer a mentoria profissional',
     'webinar.badge': 'Webinar gratuito',
     'webinar.title': 'Seus próximos passos como novo counsellor',
@@ -218,16 +218,16 @@ window.AQ_I18N = {
 
     /* Rodapé */
     'footer.referrers': 'Para quem encaminha',
-    'footer.location': 'Com base em Henty, NSW | Terapia online em toda a Austrália | Atendimento itinerante regional com agendamento prévio',
+    'footer.location': 'Sede em Henty, NSW | Terapia online em toda a Austrália | Atendimento itinerante regional com agendamento prévio',
     'footer.privacy': 'Política de Privacidade',
     'footer.terms': 'Termos e Condições',
     'footer.cancellation': 'Política de Cancelamento',
-    'footer.rights': '© 2026 Atma Qatarse Institute. Todos os direitos reservados.',
+    'footer.rights': '© 2026 Átma Qatarse Institute. Todos os direitos reservados.',
 
     /* Páginas de políticas (texto definitivo a cargo da Claudia) */
-    'policy.privacy.meta': 'Política de Privacidade | Atma Qatarse Institute',
-    'policy.terms.meta': 'Termos e Condições | Atma Qatarse Institute',
-    'policy.cancellation.meta': 'Política de Cancelamento | Atma Qatarse Institute',
+    'policy.privacy.meta': 'Política de Privacidade | Átma Qatarse Institute',
+    'policy.terms.meta': 'Termos e Condições | Átma Qatarse Institute',
+    'policy.cancellation.meta': 'Política de Cancelamento | Átma Qatarse Institute',
     'policy.back': 'Voltar ao site',
     'policy.pending': 'O texto desta política está em preparação e será publicado aqui em breve. Em caso de dúvida, escreva para',
     'policy.privacy.title': 'Política de Privacidade',

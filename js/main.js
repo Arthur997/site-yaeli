@@ -403,7 +403,7 @@
 
   function buildMailtoUrl($form) {
     return 'mailto:' + CONTACT_EMAIL +
-      '?subject=' + encodeURIComponent('Atma Qatarse Institute: ' + selectedInterest($form)) +
+      '?subject=' + encodeURIComponent('Átma Qatarse Institute: ' + selectedInterest($form)) +
       '&body=' + encodeURIComponent(buildMessage($form));
   }
 
