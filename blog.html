@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-title-key="blog.meta" data-description-key="blog.description">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog / Reflections | Átma Qatarse Institute</title>
+<meta name="description" content="Writing on women's experiences and the themes explored through the Ágape Women's Support project.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#042A45">
+<link rel="icon" type="image/png" href="imgs/favicon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Sans+3:wght@400..700&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- Blog / Reflexões do projeto Ágape. Lista de artigos em cards; cada card abre a página do artigo.
+     Artigo novo: copiar uma página blog-*.html, criar as chaves post.<id>.* em js/blog-i18n.js
+     e acrescentar o card aqui. Cabeçalho igual nas páginas do blog. -->
+<body class="bg-surface font-sans text-[17px] leading-7 text-ink">
+
+<header class="border-b border-line bg-surface">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="imgs/logo-mark.png" alt="Átma Qatarse Institute" width="320" height="194" class="h-10 w-auto">
+      <span translate="no" class="whitespace-nowrap font-display text-[15px] font-medium uppercase leading-5 tracking-[0.08em] text-brand-midnight max-sm:hidden">Átma Qatarse<span class="block text-[10px] font-sans font-semibold leading-3 tracking-[0.3em] text-accent-ink">Institute</span></span>
+    </a>
+    <div class="flex items-center gap-1 sm:gap-3">
+      <nav class="flex items-center gap-1 text-[15px] font-semibold" aria-label="Sections" data-i18n-aria="nav.label">
+        <a href="index.html" class="whitespace-nowrap rounded-full px-3 py-2 text-ink-muted hover:bg-action-subtle hover:text-action-ink" data-i18n="blog.home">Home</a>
+        <a href="blog.html" aria-current="page" class="whitespace-nowrap rounded-full bg-action-subtle px-3 py-2 text-action-ink">Blog</a>
+      </nav>
+      <div class="flex rounded-full border border-line-strong p-0.5 text-[13px] font-semibold leading-4" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" data-lang="en" aria-pressed="true" class="lang-option rounded-full px-2.5 py-1.5" lang="en">EN</button>
+        <button type="button" data-lang="pt" aria-pressed="false" class="lang-option rounded-full px-2.5 py-1.5" lang="pt-BR">PT</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="marble bg-brand-midnight text-ink-invert">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+      <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-navy-accentink" data-i18n="blog.overline">Blog / Reflections</p>
+      <h1 class="mt-3 font-display text-display-m font-medium uppercase sm:text-display-l" data-i18n="blog.title">Reflections</h1>
+      <span class="mt-5 block h-px w-14 bg-accent" aria-hidden="true"></span>
+      <p class="mt-6 max-w-2xl text-ink-invertmuted" data-i18n="group.do.text3">The Blog / Reflections brings together writing related to women's experiences and the themes explored through the project, providing opportunities for continued reflection beyond the group meetings.</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div class="grid gap-8 md:grid-cols-2">
+
+      <article class="group flex flex-col overflow-hidden rounded-xl border border-line bg-surface-raised">
+        <a href="blog-queen-mother-snake.html" class="block overflow-hidden" tabindex="-1" aria-hidden="true">
+          <img src="imgs/web/queen-mother-snake.jpg" alt="" width="896" height="1280" loading="lazy" class="aspect-[16/10] w-full object-cover object-[center_45%] transition-transform duration-500 group-hover:scale-[1.03]">
+        </a>
+        <div class="flex flex-1 flex-col p-6 sm:p-8">
+          <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-accent-ink" data-i18n="blog.category"><span translate="no">Ágape</span> Project</p>
+          <h2 class="mt-3 font-display text-[24px] font-medium uppercase leading-8 tracking-[0.03em] text-brand-midnight">
+            <a href="blog-queen-mother-snake.html" class="hover:underline" data-i18n="post.serpent.title">Queen Mother Snake</a>
+          </h2>
+          <p class="mt-1 text-[15px] italic leading-6 text-ink-subtle" data-i18n="post.serpent.subtitle">The one who makes herself whole</p>
+          <p class="mt-4 text-ink-muted" data-i18n="post.serpent.excerpt">The idea of a sovereign woman is difficult for everyone to understand, including most women.</p>
+          <div class="mt-auto flex items-center justify-between gap-4 pt-6 text-[15px] font-semibold leading-5">
+            <span class="text-ink-subtle"><span data-i18n="post.by">By</span> Iyá Ben</span>
+            <a href="blog-queen-mother-snake.html" class="text-action-ink hover:underline" data-i18n="blog.read">Read article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group flex flex-col overflow-hidden rounded-xl border border-line bg-surface-raised">
+        <a href="blog-from-adjunct-to-opponent.html" class="block overflow-hidden" tabindex="-1" aria-hidden="true">
+          <img src="imgs/web/eve-garden.jpg" alt="" width="1376" height="768" loading="lazy" class="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+        </a>
+        <div class="flex flex-1 flex-col p-6 sm:p-8">
+          <p class="text-[12px] font-semibold uppercase leading-4 tracking-[0.16em] text-accent-ink" data-i18n="blog.category"><span translate="no">Ágape</span> Project</p>
+          <h2 class="mt-3 font-display text-[24px] font-medium uppercase leading-8 tracking-[0.03em] text-brand-midnight">
+            <a href="blog-from-adjunct-to-opponent.html" class="hover:underline" data-i18n="post.eve.title">From Adjunct to Opponent</a>
+          </h2>
+          <p class="mt-4 text-ink-muted" data-i18n="post.eve.excerpt">The incredible feeling of opening her eyes for the first time was etched in her mind. The first image of her partner would forever remain in her memory.</p>
+          <div class="mt-auto flex items-center justify-end gap-4 pt-6 text-[15px] font-semibold leading-5">
+            <a href="blog-from-adjunct-to-opponent.html" class="text-action-ink hover:underline" data-i18n="blog.read">Read article</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <a href="index.html" class="mt-14 inline-flex items-center justify-center rounded-full border border-line-strong px-7 py-3.5 text-[15px] font-semibold leading-5 tracking-[0.02em] text-action-ink hover:bg-action-subtle" data-i18n="post.home">Back to home</a>
+  </section>
+</main>
+
+<footer class="on-navy bg-brand-charcoal">
+  <div class="mx-auto max-w-6xl px-4 py-8 text-[13px] leading-6 text-ink-invertmuted sm:px-6">
+    <p data-i18n="footer.rights">© 2026 Átma Qatarse Institute. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/i18n.js"></script>
+<script src="js/blog-i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

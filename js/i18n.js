@@ -113,6 +113,7 @@ window.AQ_I18N = {
     'group.do.text1': 'Atualmente, a AWS desenvolve duas atividades principais: o Grupo Terapêutico para Mulheres e o Blog / Reflexões.',
     'group.do.text2': 'O Grupo Terapêutico para Mulheres acontece online, em pequenos grupos facilitados, criando espaço para reflexão e diálogo sobre experiências que atravessam a vida das mulheres, incluindo trauma, luto e perdas, sexualidade, corpo, família, relacionamentos, identidade, limites e sobrecarga emocional.',
     'group.do.text3': 'O Blog / Reflexões reúne textos relacionados às experiências das mulheres e aos temas explorados pelo projeto, oferecendo oportunidades de continuidade da reflexão para além dos encontros.',
+    'group.do.blog': 'Ler o blog',
     'group.access.title': 'Acessibilidade e participação',
     'group.access.text1': 'A condição financeira não deve ser uma barreira à participação. Por isso, os grupos da AWS não possuem taxa obrigatória. A participante pode se inscrever por $0.',
     'group.access.text2': 'Para aquelas que desejarem contribuir com a continuidade do projeto, haverá também a possibilidade de contribuição voluntária. A contribuição financeira não altera o acesso ou a experiência de participação no grupo.',
@@ -159,7 +160,7 @@ window.AQ_I18N = {
     'training.cta': 'Registrar meu interesse',
     'supervision.badge': 'A partir de maio de 2027',
     'supervision.title': 'Supervisão',
-    'supervision.text': 'Supervisão em grupo para profissionais, com Claudia Cady. A lista de espera está aberta.',
+    'supervision.text': 'Supervisão em grupo e individual para profissionais, com Claudia Cady. A lista de espera está aberta.',
     'supervision.cta': 'Entrar na lista de espera',
 
     /* Depoimentos */

@@ -415,3 +415,31 @@ html:not(.js) .tab[aria-selected='true'] {
     transition: none;
   }
 }
+
+/* Corpo dos artigos do blog. O texto vem de i18n (HTML pronto), então o espaçamento
+   fica aqui em vez de classes em cada parágrafo. */
+.article-body > * + * {
+  margin-top: 1.25em;
+}
+.article-body h2 {
+  margin-top: 2em;
+  font-family: Cinzel, 'Trajan Pro', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #042a45;
+}
+.article-body h2:first-child {
+  margin-top: 0;
+}
+.article-body blockquote {
+  border-left: 2px solid #ad8b43;
+  padding-left: 1.25em;
+  font-style: italic;
+  color: #34444f;
+}
+.article-body .article-signature {
+  text-align: right;
+  font-style: italic;
+}

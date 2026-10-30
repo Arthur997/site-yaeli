@@ -15,6 +15,8 @@
   var currentLang = DEFAULT_LANG;
   /* Páginas internas (políticas) indicam a própria chave de título em <html data-title-key>. */
   var TITLE_KEY = document.documentElement.getAttribute('data-title-key') || 'meta.title';
+  /* Idem para a descrição (blog): sem ela a página herdaria a descrição da home. */
+  var DESCRIPTION_KEY = document.documentElement.getAttribute('data-description-key') || 'meta.description';
 
   /* Links externos ainda pendentes, ligados aos botões por data-link.
      Vazio: botão com data-closed fica desativado com aquele aviso; sem data-closed mantém o href da página. */
@@ -139,7 +141,7 @@
 
     document.documentElement.lang = HTML_LANG[currentLang];
     document.title = translate(TITLE_KEY);
-    $('meta[name="description"]').attr('content', translate('meta.description'));
+    $('meta[name="description"]').attr('content', translate(DESCRIPTION_KEY));
     $('[data-lang]').each(function () {
       $(this).attr('aria-pressed', String($(this).data('lang') === currentLang));
     });
